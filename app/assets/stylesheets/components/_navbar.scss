@@ -10,3 +10,25 @@
 .navbar-lewagon .navbar-brand img {
   width: 100px;
 }
+
+.navbar li a {
+  color: #000!important;
+  font-size: 1.1rem;
+}
+
+
+.navbar li a:hover {
+  color: #d6514a!important;
+  font-size: 1.1rem;
+}
+
+.login-button {
+  border: 2px solid #d6514a;
+  border-radius: 20px;
+  padding: 5px 30px!important;
+  margin-left: 10px;
+}
+
+.login-button:hover {
+  text-decoration: none;
+}
