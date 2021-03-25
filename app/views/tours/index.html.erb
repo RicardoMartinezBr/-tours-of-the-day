@@ -1,26 +1,19 @@
 <div class="container">
   <h1>Here go all tours</h1>
-<div class="card-trip">
-<%= @tours.each do |tour| %>
-
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-  <div class="card-trip-infos">
-    <div>
-      <h2><%= tour.name %></h2>
-      <p><%= tour.description %></p>
-      <h3><%= tour.city %></h3>
-    </div>
-    <h2 class="card-trip-pricing">€<%= tour.price %></h2>
-    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+  <div class="row">
+    <%= @tours.each do |tour| %>
+      <div class="card-trip col-4 mr-3">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= tour.name %></h2>
+            <p><%= tour.description %></p>
+            <p><%= tour.city %></p>
+          </div>
+          <h2 class="card-trip-pricing">€<%= tour.price %></h2>
+          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+        </div>
+      </div>
+    <% end %>
   </div>
-</div>
-
-
-
-
-
-
-  <span></span>
-
-<% end %>
 </div>

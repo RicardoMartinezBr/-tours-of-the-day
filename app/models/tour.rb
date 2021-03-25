@@ -3,7 +3,7 @@ class Tour < ApplicationRecord
   has_many :photos
 
   CATEGORIES = ['City Tour', 'Boat Tour', 'Private Tours', 'Bike Tour', 'Museum Guide', 'Night Tour', 'Keukenhof', 'Walking Tour']
-  validates :category, presence: true, inclusion: { in: CATEGORIES }
+  # validates :category, presence: true, inclusion: { in: CATEGORIES }
 
   # validates :name, presence
   # validates :city, presence

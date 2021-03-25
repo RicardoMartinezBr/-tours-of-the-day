@@ -14,7 +14,7 @@ class ToursController < ApplicationController
 
   def create
     @tour = Tour.create(tour_params)
-    # @tour.user = current_user
+    @tour.user = current_user
     if @tour.save
       redirect_to tour_path(@tour)
     else
@@ -42,7 +42,7 @@ class ToursController < ApplicationController
   private
 
   def tour_params
-    params.require(:tour).permit(:name, :city, :country, :description, :price, :category, photos: [])
+    params.require(:tour).permit(:name, :city, :country, :description, :price, :category)
   end
 
   def set_tour
