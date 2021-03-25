@@ -5,6 +5,8 @@ ruby '2.6.6'
 # devise login system
 gem 'devise'
 
+# cloudinary for users to add images
+gem 'cloudinary', '~> 1.16.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3'
 # Use postgresql as the database for Active Record
