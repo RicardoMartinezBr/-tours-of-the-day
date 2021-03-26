@@ -11,7 +11,9 @@
         <%# end %>
         <div class="card-trip-infos">
           <div>
-            <h2><%= tour.name %></h2>
+            <%= link_to tour_path(tour), class: "index-link pb-1" do %>
+              <h2><%= tour.name %></h2>
+            <% end %>
             <p><%= tour.description&.truncate(25, separator: " ") %></p>
             <p><b><%= tour.city %> </b></p>
           </div>

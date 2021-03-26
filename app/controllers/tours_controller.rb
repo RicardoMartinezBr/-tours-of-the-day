@@ -24,7 +24,7 @@ class ToursController < ApplicationController
     if @tour.save
       redirect_to tour_path(@tour)
     else
-       render :new
+       render :show
     end
   end
 
@@ -48,7 +48,7 @@ class ToursController < ApplicationController
   private
 
   def tour_params
-    params.require(:tour).permit(:name, :city, :country, :description, :duration, :price, :category, photos: [])
+    params.require(:tour).permit(:name, :city, :description, :duration, :price, :category, photos: [])
   end
 
   def set_tour
