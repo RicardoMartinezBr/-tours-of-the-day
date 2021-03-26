@@ -29,12 +29,12 @@
                       required: true,
                       input_html: { autocomplete: "new-password" } %>
         </div>
-        <label class="btn btn-dark">
+        <!-- <label class="btn btn-dark">
           <i class="fas fa-images"></i> Add photos to your tour
           <span style="display:none;">
-            <%= f.input :avatar, as: :file, input_html: { multiple: true } %>
+            <%#= f.input :avatar, as: :file, input_html: { multiple: true } %>
           </span>
-        </label>
+        </label> -->
 
         <div class="form-actions">
           <%= f.button :submit, "Sign up", class:'btn btn-primary' %>
