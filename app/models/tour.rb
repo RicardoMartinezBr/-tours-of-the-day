@@ -1,6 +1,6 @@
 class Tour < ApplicationRecord
   belongs_to :user
-  has_many :photos
+  has_many_attached :photos
 
   CATEGORIES = ['City Tour', 'Boat Tour', 'Private Tours', 'Bike Tour', 'Museum Guide', 'Night Tour', 'Keukenhof', 'Walking Tour']
   # validates :category, presence: true, inclusion: { in: CATEGORIES }
