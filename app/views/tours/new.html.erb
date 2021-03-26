@@ -4,11 +4,12 @@
 
     <div class="container">
       <%= simple_form_for @tour do |f| %>
-        <%= f.input :name %>
-        <%= f.input :city %>
-        <%= f.input :description %>
-        <%= f.input :price %>
-        <%= f.input :category %>
+        <%= f.input :name, placeholder: ' Tour name... E.g. City Tour?' %>
+        <%= f.input :city, placeholder: 'In what city is the tour? E.g. Amsterdam' %>
+        <%= f.input :price, placeholder: 'What is the price of the tour? E.g. Price 150 p/p' %>
+        <%= f.input :duration, placeholder: 'How long is the tour? E.g. 1 for one hour or 1,5 for one and and hafl hour' %>
+        <%= f.input :category, placeholder: 'Tour category E.g. private tour or group tour...' %>
+        <%= f.input :description, as: :text, placeholder: 'Add here the description of you tour!' %>
       <label class="btn btn-dark">
         <i class="fas fa-images"></i> Add photos to your tour
         <span style="display:none;">
@@ -19,7 +20,7 @@
         <div class="d-flex">
           <%= f.submit "Create Tour", class:'btn btn-primary' %>
           <% if action_name == 'edit' %>
-            <%= link_to(chair, method: :delete, data: { confirm: 'Are you sure?' }, class: "ml-2") do %>
+            <%= link_to(tour, method: :delete, data: { confirm: 'Are you sure?' }, class: "ml-2") do %>
             <i class="far fa-trash-alt"></i>
           <% end %>
           <% end %>

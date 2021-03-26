@@ -2,6 +2,11 @@ class ToursController < ApplicationController
   before_action :set_tour, only: %i[show edit update destroy]
   def index
     @tours = Tour.all
+    if params[:query].present?
+      @tours = Tour.where("category ILIKE ?", "%#{params[:query]}%")
+    else
+      @tours = Tour.all
+    end
   end
 
   def show
@@ -43,7 +48,7 @@ class ToursController < ApplicationController
   private
 
   def tour_params
-    params.require(:tour).permit(:name, :city, :country, :description, :price, :category, photos: [])
+    params.require(:tour).permit(:name, :city, :country, :description, :duration, :price, :category, photos: [])
   end
 
   def set_tour
