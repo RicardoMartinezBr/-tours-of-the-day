@@ -1,0 +1,47 @@
+.footer-logo {
+  height: 100px;
+  width: 143px;
+  margin-top: 13px;
+}
+
+.footer-hr {
+  border-bottom: 1px solid #ffffff99;
+  width: 80%;
+}
+
+.footer-background {
+  background: #d6514a;
+}
+
+.copyright {
+  color: #fff;
+}
+
+.newsletter-email-input {
+  width: 400px;
+  padding: 10px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: 2px solid #00000099;
+}
+
+.newsletter-label {
+  color: #fff;
+}
+
+.newsletter-email-input:focus {
+  outline: none;
+}
+
+.newsletter-button {
+  background: #000;
+  color: #fff;
+  height: 48px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 0px 30px;
+  margin-top: 32px;
+  margin-right: 20px;
+  margin-left: -20px;
+  border: none;
+}

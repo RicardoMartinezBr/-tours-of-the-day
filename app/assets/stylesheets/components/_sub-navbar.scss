@@ -4,6 +4,7 @@
   width: 100%;
   background: #d6514a;
   justify-content:center;
+  margin-bottom: 0px;
 }
 
 .sub-nav-tabs li {
@@ -44,7 +45,7 @@
   text-decoration: none;
 }
 
-@media (max-width: 900px){
+@media (max-width: 1200px){
   .sub-nav {
     display: none!important;
   }
