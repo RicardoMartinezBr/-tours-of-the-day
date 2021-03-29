@@ -1,14 +1,15 @@
 <footer class="footer-background">
   <div class="custom-container newsletter d-flex justify-content-between">
     <%= image_tag "logo2.png", alt: "this is the logo of tours of the day", class: "footer-logo" %>
-    <form method="post" action="https://sendfox.com/form/m74gdm/m7xrvv" class="mt-4" id="m7xrvv" data-async="true" data-recaptcha="false">
+    <!-- <form method="post" action="https://sendfox.com/form/m74gdm/m7xrvv" class="mt-4" id="m7xrvv" data-async="true" data-recaptcha="false"> -->
+    <form action="" class="mt-4">
       <div class="d-flex">
         <div class="d-flex flex-column">
           <label for="email" class="newsletter-label">Subscribe for our Newsletter</label>
           <input type="email" placeholder="Email" name="email" class="newsletter-email-input" required />
         </div>
         <!-- no botz please -->
-        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="a_password" tabindex="-1" value="" autocomplete="off" /></div>
+        <!-- <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="a_password" tabindex="-1" value="" autocomplete="off" /></div> -->
         <button type="submit" class="newsletter-button">Subscribe</button>
       </div>
     </form>
