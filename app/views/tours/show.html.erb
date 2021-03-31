@@ -1,7 +1,27 @@
-<h1>here goes each individual tour page</h1>
+<div class="custom-container d-flex justify-content-between">
+  <div class="header-and-rating mt-3">
+    <h1><%= @tour.name %></h1>
+    <p>100 reviews</p>
+  </div>
+  <span>Add to favorites</span>
+</div>
 
-<%= cl_image_tag @tour.photos[0].key %>
-<h2><%= @tour.name %></h2>
-<p><%= @tour.description %></p>
-<h3><%= @tour.city %></h3>
-<span> €<%= @tour.price %></span>
+<div class="custom-container d-flex tour-photos-layout">
+  <div class="side-carousel-image mr-2">
+    <%= cl_image_tag @tour.photos[0].key, class: "mb-2" %>
+    <%= cl_image_tag @tour.photos[0].key %>
+  </div>
+  <div class="carousel">
+    <%= cl_image_tag @tour.photos[0].key, class: "carousel-size" %>
+  </div>
+    <div class="side-carousel-image ml-2">
+    <%= cl_image_tag @tour.photos[0].key, class: "mb-2" %>
+    <%= cl_image_tag @tour.photos[0].key %>
+  </div>
+</div>
+
+<div class="custom-container mt-3">
+  <p><%= @tour.description %></p>
+  <h3><%= @tour.city %></h3>
+  <span> €<%= @tour.price %></span>
+</div>

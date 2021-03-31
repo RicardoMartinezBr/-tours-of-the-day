@@ -1,0 +1,70 @@
+.side-carousel-image {
+  width: 300px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  object-fit: cover;
+  opacity: 0.8;
+
+}
+
+.carousel-size {
+  width: 600px;
+  height: 384px;
+}
+
+.header-and-rating h1 {
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/*.tour-photos-layout {
+  border-radius: 50px!important;
+}*/
+
+/*.carousel {
+
+}*/
+
+@media (max-width: 300px){
+  .carousel-size {
+    width: 100%;
+    height: 95%;
+  }
+  .side-carousel_image {
+    display: none;
+  }
+
+  .header-and-rating h1 {
+    font-family: inherit;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+}
+
+@media (max-width: 375px){
+  .side-carousel-image {
+    display: none;
+  }
+  .carousel-size {
+    width: 100%;
+    height: 95%;
+  }
+  .header-and-rating h1 {
+    font-family: inherit;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+}
+
+@media (max-width: 575px){
+  .side-carousel-image {
+    display: none;
+  }
+  .carousel-size {
+    width: 100%;
+    height: 95%;
+  }
+}
