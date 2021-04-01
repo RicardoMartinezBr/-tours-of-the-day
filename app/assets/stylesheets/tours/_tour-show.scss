@@ -1,16 +1,22 @@
 .side-carousel-image {
   width: 300px;
-  height: auto;
+  max-height: 380px;
   display: flex;
   flex-direction: column;
   object-fit: cover;
   opacity: 0.8;
+}
 
+.show-image-size {
+  width: 300px;
+  max-height: 188px;
+  object-fit: cover;
 }
 
 .carousel-size {
   width: 600px;
   height: 384px;
+  object-fit: cover;
 }
 
 .header-and-rating h1 {
