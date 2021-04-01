@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_26_143214) do
+ActiveRecord::Schema.define(version: 2021_04_01_075815) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,20 @@ ActiveRecord::Schema.define(version: 2021_03_26_143214) do
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
+  create_table "reservations", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "tour_id", null: false
+    t.integer "total_price"
+    t.datetime "date"
+    t.integer "amount_of_people"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.boolean "approved", default: false
+    t.boolean "declined", default: false
+    t.index ["tour_id"], name: "index_reservations_on_tour_id"
+    t.index ["user_id"], name: "index_reservations_on_user_id"
   end
 
   create_table "tours", force: :cascade do |t|
@@ -77,5 +91,7 @@ ActiveRecord::Schema.define(version: 2021_03_26_143214) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "reservations", "tours"
+  add_foreign_key "reservations", "users"
   add_foreign_key "tours", "users"
 end
