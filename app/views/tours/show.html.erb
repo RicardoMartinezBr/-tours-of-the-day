@@ -8,20 +8,36 @@
 
 <div class="custom-container d-flex tour-photos-layout">
   <div class="side-carousel-image mr-2">
-    <%= cl_image_tag @tour.photos[0].key, class: "mb-2" %>
-    <%= cl_image_tag @tour.photos[0].key %>
+    <%= cl_image_tag @tour.photos[0].key, class: "mb-2 show-image-size" %>
+    <%= cl_image_tag @tour.photos[0].key, class: "show-image-size" %>
   </div>
   <div class="carousel">
     <%= cl_image_tag @tour.photos[0].key, class: "carousel-size" %>
   </div>
     <div class="side-carousel-image ml-2">
-    <%= cl_image_tag @tour.photos[0].key, class: "mb-2" %>
-    <%= cl_image_tag @tour.photos[0].key %>
+    <%= cl_image_tag @tour.photos[0].key, class: "mb-2 show-image-size" %>
+    <%= cl_image_tag @tour.photos[0].key, class: "show-image-size" %>
   </div>
 </div>
 
-<div class="custom-container mt-3">
-  <p><%= @tour.description %></p>
-  <h3><%= @tour.city %></h3>
-  <span> €<%= @tour.price %></span>
+<div class="custom-container mt-3 d-flex">
+  <div>
+    <p><%= @tour.description %></p>
+    <h3><%= @tour.city %></h3>
+  </div>
+
+  <div class="booking-form">
+    <div class="booking-box">
+      <h2>Book your Tour:</h2>
+      <%= simple_form_for ([@tour, @reservations]) do |f| %>
+      <%= f.input :date, as: :date, html5: true %>
+      <div class="details-show-price py-2 pr-1">
+        <h4 class="text-center" id="priceCalculator" data-price="<%= @tour.price %>">Total: $  <%= number_with_precision(@tour.price, precision: 0) %> <span>/day</span></h4>
+      </div>
+      <%= f.submit "Book Now", class:"btn btn-danger w-100 button-design" %>
+      <% end %>
+    </div>
+  </div>
+
+  <!-- <span> €<%#= @tour.price %></span> -->
 </div>

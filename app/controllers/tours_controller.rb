@@ -1,4 +1,5 @@
 class ToursController < ApplicationController
+  skip_before_action :authenticate_user!, only: %i[index show]
   before_action :set_tour, only: %i[show edit update destroy]
   def index
     @tours = Tour.all
@@ -7,10 +8,13 @@ class ToursController < ApplicationController
     else
       @tours = Tour.all
     end
+    @favorite = Favorite.new
   end
 
   def show
     @tour = Tour.find(params[:id])
+    @reservations = Reservation.new
+    @favorite = Favorite.new
   end
 
   def new
