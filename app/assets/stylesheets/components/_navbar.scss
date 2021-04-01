@@ -32,3 +32,26 @@
 .login-button:hover {
   text-decoration: none;
 }
+
+.navbar-light .navbar-toggler {
+  border:none!important;
+}
+
+@media (max-width: 300px){
+  .navbar-custom-layout {
+    border-bottom: 1px solid #f1f1f199;
+  }
+}
+
+@media (max-width: 375px){
+  .navbar-custom-layout {
+    border-bottom: 1px solid #cecece;
+  }
+}
+
+@media (max-width: 575px){
+  .navbar-custom-layout {
+    /*border-bottom: 1px solid #cecece;*/
+    box-shadow: 1px 1px 5px #f1f1f1E8;
+  }
+}
