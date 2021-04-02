@@ -1,0 +1,29 @@
+<div class="new-tour-bg py-5">
+  <div class="container new-tour-form">
+    <h1 class="pl-2">Create Your tour</h1>
+
+    <div class="container">
+      <%= simple_form_for @tour do |f| %>
+        <%= f.input :name %>
+        <%= f.input :city %>
+        <%= f.input :price %>
+        <%= f.input :duration %>
+        <%= f.input :category %>
+        <%= f.input :description %>
+        <label class="btn btn-dark">
+          <i class="fas fa-images"></i> Add photos to your tour
+          <span style="display:none;">
+            <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+          </span>
+        </label>
+        <div class="d-flex">
+          <%= f.submit "submit", class:'btn btn-primary' %>
+          <% if action_name == 'edit' %>
+            <%= link_to(@tour, method: :delete, data: { confirm: 'Are you sure?' }, class: "ml-2") do %>
+            <i class="far fa-trash-alt"></i>
+          <% end %>
+          <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
