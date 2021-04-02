@@ -1,0 +1,54 @@
+<h2 class="my-5">You favorited the following tours:</h2>
+<% if @favorites.blank? %>
+  <p>You have not favorited any photographers yet</p>
+<% else %>
+  <% @favorites.each do |fav| %>
+    <%= link_to tour_path(fav.tour), class: "index-cards" do %>
+      <div class="card entire-card decrease-card-height" id="index-cards">
+        <div class="card-product-infos">
+          <div class="d-flex">
+            <%= cl_image_tag fav.tour.photo.key, class:"decrease-image-size" %>
+            <div class="card-body">
+              <div class="favorite-card-content">
+                <div class="d-flex">
+                  <h2 class="mb-3" id="index-photographer"><%= fav.tour.full_name %></h2>
+                  <p> <i class="fas fa-star"></i> <%= @tour.average_rating %> (<%= @tour.reviews.count%> <%= @tour.reviews.count > 1 ? "reviews" : "review" %>)</p>
+
+                  <div id="tour-favorites-<%= fav.tour.id %>" class="index-heart-favorite">
+                    <%= render 'favorites/favoriteJS', tour: fav.tour %>
+                  </div>
+                </div>
+                <div id="index-price">
+                  $ <%= fav.tour.price %>
+                  <span>
+                    /day
+                  </span>
+                </div>
+                <p id="index-user">
+                  Listed by: <%= fav.tour.user.first_name %>
+                </p>
+                <div>
+                  <%= link_to (chatroom_path(@chatroom)) do %>
+                    <i class="far fa-comment-dots"></i>
+                  <% end %>
+                </div>
+              </div>
+              <div class=" booking-box-favorites">
+                <h2>Book your Tour</h2>
+                <%= simple_form_for ([@tour, @reservations]) do |f| %>
+                <%= f.input :date, as: :date, html5: true %>
+                <%= f.input :amount_of_people, placeholder: 'E.g. 1' %>
+                <div class="details-show-price py-2 pr-1">
+                  <p class="text-center" id="priceCalculator" data-price="<%= @tour.price %>"> Total: € <%= number_with_precision(@tour.price, precision: 0) %> <span>p/p</span></p>
+                </div>
+                <%= f.submit "Book Now", class:"btn btn-danger w-100 button-design" %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
+
