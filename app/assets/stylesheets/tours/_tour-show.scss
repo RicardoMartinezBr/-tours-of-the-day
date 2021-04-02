@@ -1,22 +1,30 @@
+.tour-photos-layout {
+  display: flex;
+  width: 1000px;
+}
+
 .side-carousel-image {
   width: 300px;
-  max-height: 380px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   object-fit: cover;
   opacity: 0.8;
+
 }
 
 .show-image-size {
-  width: 300px;
-  max-height: 188px;
+  /*width: 300px;*/
+  height: 190px;
   object-fit: cover;
+  flex:1;
 }
 
 .carousel-size {
-  width: 600px;
-  height: 384px;
+  width: 630px;
+  height: 400px;
   object-fit: cover;
+  flex:2;
 }
 
 .header-and-rating h1 {
@@ -24,14 +32,6 @@
   font-size: 2rem;
   font-weight: 600;
 }
-
-/*.tour-photos-layout {
-  border-radius: 50px!important;
-}*/
-
-/*.carousel {
-
-}*/
 
 .tour-descriptio-show {
   flex:2;

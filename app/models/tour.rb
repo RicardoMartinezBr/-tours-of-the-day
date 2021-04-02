@@ -6,7 +6,7 @@ class Tour < ApplicationRecord
   has_many :reviews, through: :reservations, dependent: :destroy
 
   # Validations
-  validates :user, uniqueness: true
+  # validates :user, uniqueness: true
   validates :photos, length: { minimum: 1 }
   # validates :name, presence
   # validates :city, presence

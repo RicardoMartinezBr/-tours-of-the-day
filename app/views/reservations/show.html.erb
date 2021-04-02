@@ -3,7 +3,7 @@
     <h1>Congratulations!</h1>
     <p>You requested <%= @reservation.tour.name %> for <strong> <%= @reservation.date.strftime("%B %-d, %Y") %> </strong></p>
     <p>Waitig for <%= @reservation.tour.name %> to approve your request...</p>
-    <%= link_to "Your Dashboard", reservations_path, class: "btn btn-primary my-3" %>
+    <%= link_to "Your Dashboard", dashboard_path, class: "btn btn-danger my-3" %>
     <p class="small-font no-hover-decoration"><%= link_to "See other tour options!", tours_path %> </p>
   </div>
 </div>
