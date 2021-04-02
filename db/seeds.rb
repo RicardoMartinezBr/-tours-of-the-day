@@ -26,6 +26,8 @@ puts "Generating Tour"
 
 tour_1 = Tour.create(user_id:13, name: "The Hague City Tour", city: "The Hague", price: 300, category: "city tour", duration: "4", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
 tour_1_image = URI.open("http://res.cloudinary.com/dynirwhqr/image/upload/22o4lfdnpe49q1fer5y4sdu7vwc7")
+tour_1_image = URI.open("https://images.unsplash.com/photo-1558551649-e44c8f992010?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8YW1zdGVyZGFtfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
+tour_1.photos.attach(io: tour_10_image, filename: "tourimg10.png", content_type: "image/png")
 tour_1.photos.attach(io: tour_1_image, filename: "tourimg2.png", content_type: "image/png")
 tour_1.save!
 
@@ -35,7 +37,7 @@ tour_2.photos.attach(io: tour_2_image, filename: "tourimg3.png", content_type: "
 tour_2.save!
 
 tour_3 = Tour.create(user_id:13, name: "Amsterdam Boat Tour", city: "Amsterdam", price: 300, category: "boat tour", duration: "3", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
-tour_3_image = URI.open("https://images.unsplash.com/photo-1558551649-e44c8f992010?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8YW1zdGVyZGFtfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
+tour_3_image = URI.open("https://images.unsplash.com/photo-1529943247435-a5974e63d6e4?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTR8fGFtc3RlcmRhbXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_3.photos.attach(io: tour_3_image, filename: "tourimg3.png", content_type: "image/png")
 tour_3.save!
 

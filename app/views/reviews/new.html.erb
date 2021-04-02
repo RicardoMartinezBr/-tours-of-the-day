@@ -1,0 +1,17 @@
+<div class="new-review-background d-flex align-items-center justify-content-center">
+  <div class="container review-form text-center">
+    <h1>How was your Experience with <%= @tour.name %>? </h1>
+    <div class="align-items-center justify-content-center">
+      <div class="">
+        <%= simple_form_for [@tour, @reservation, @review] do |f| %>
+          <%= f.input :review_description, placeholder: "Create a Review here...", label:false, class: "review-form-bar w-100" %>
+          <div class="d-flex justify-content-center">
+            <p class="mr-3 mt-1">Your Rating: </p>
+            <%= f.input :tour_rating, collection: (1..5).to_a, label: false, class: "d-flex justify-content-center" %>
+          </div>
+          <%= f.submit "Submit your review", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

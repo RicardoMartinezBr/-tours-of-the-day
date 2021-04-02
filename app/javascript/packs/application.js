@@ -24,7 +24,16 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
+import { openProfile } from './indexHover'
+// import { priceCalculator } from '../plugins/price_calculator';
+import { initStarRating } from '../plugins/init_star_rating';
+// import { initChatroomCable } from '../channels/chatroom_channel';
+
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  window.openProfile = openProfile;
+  initStarRating();
+  initChatroomCable();
 });
+console.log('end of file');

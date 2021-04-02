@@ -1,7 +1,7 @@
 class ReservationsController < ApplicationController
   def show
     @reservation = Reservation.find(params[:id])
-    authorize(@reservation)
+    # authorize(@reservation)
   end
 
   def create
@@ -11,28 +11,28 @@ class ReservationsController < ApplicationController
     @reservation.user = @user
     @reservation.tour = @tour
     if @reservation.date != nil
-      authorize(@reservation)
+      # authorize(@reservation)
       if @reservation.save
         redirect_to reservation_path(@reservation), notice: "Reservation was saved succsessfully!"
       else
         redirect_to tour_path(@tour), notice: "Could not create Reservation!"
       end
     else
-      authorize(@reservation)
+      # authorize(@reservation)
       redirect_to tour_path(@tour), notice: "Enter a Date for the Reservation!"
     end
   end
 
   def destroy
     @reservation = Reservation.find(params[:id])
-    authorize(@reservation)
+    # authorize(@reservation)
     @reservation.destroy
     redirect_to reservations_path, notice: "Reservation was cancelled succsesfully!"
   end
 
   def update
     @reservation = Reservation.find(params[:id])
-    authorize(@reservation)
+    # authorize(@reservation)
 
     if params[:approve] == "true"
       @reservation.approved = true
