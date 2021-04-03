@@ -11,12 +11,14 @@
     <li class="nav-item" role="presentation">
       <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Reservations</a>
     </li>
-    <li class="nav-item" role="presentation">
-      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Requests</a>
-    </li>
-    <li class="nav-item" role="presentation">
-      <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">tour</a>
-    </li>
+    <% if current_user.role == "Admin" %>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Requests</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Tour</a>
+      </li>
+    <% end %>
     <li class="nav-item" role="presentation">
       <a class="nav-link" id="favorites-tab" data-toggle="tab" href="#favorites" role="tab" aria-controls="favorites" aria-selected="false">Favorites</a>
     </li>
@@ -28,7 +30,7 @@
         <%  if @reservations.blank? %>
           <p>You have not made any reservations yet.</p>
         <% else %>
-          <%= render "reservations-cards" %>
+          <%= render "reservations-cards", reservation: reservation %>
         <% end %>
       </div>
 

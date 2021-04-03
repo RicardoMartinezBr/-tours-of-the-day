@@ -2,7 +2,7 @@
   <div class="requests " id="requests">
     <h2 class="my-5">Your services are requested for the following dates:</h2>
     <% if @requests.blank? %>
-      <p>No one has requested your profile yet.</p>
+      <p>No one has booked your tour yet.</p>
     <% else %>
       <% @requests.each do |request| %>
         <div class="d-flex align-items-center">

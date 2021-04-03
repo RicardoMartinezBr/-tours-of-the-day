@@ -16,7 +16,7 @@
               <%= link_to "All Tours", tours_path, class: "nav-link" %>
             </li>
             <% if user_signed_in? %>
-            <% if current_user.role == "Tour Guide" || "Admin" %>
+            <% if current_user.role == "Admin" %>
               <li class="">
                 <%= link_to "Create a Tour", new_tour_path, class: "nav-link" %>
               </li>
