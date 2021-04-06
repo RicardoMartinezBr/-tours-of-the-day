@@ -1,26 +1,64 @@
-<footer class="footer-background">
-  <div class="custom-container newsletter">
-    <%= image_tag "logo2.png", alt: "This is the logo of tours of the day", class: "footer-logo" %>
-    <!-- <form method="post" action="https://sendfox.com/form/m74gdm/m7xrvv" class="mt-4" id="m7xrvv" data-async="true" data-recaptcha="false"> -->
-    <form action="" class="mt-4">
-      <div class="d-flex">
-        <div class="d-flex flex-column">
-          <label for="email" class="newsletter-label">Subscribe for our Newsletter</label>
-          <input type="email" placeholder="Email" name="email" class="newsletter-email-input" required />
-        </div>
-        <!-- no botz please -->
-        <!-- <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="a_password" tabindex="-1" value="" autocomplete="off" /></div> -->
-        <button type="submit" class="newsletter-button">Subscribe</button>
+<section id="footer">
+  <footer class="px-3">
+    <div class="footer-responsive pb-md-4">
+      <div class="footer-links Footer-tours">
+        <%= image_tag "logo2.png", alt: "This is the logo of tours of the day", class: "footer-logo" %>
+        <label for="cars">Choose a city</label>
+        <select name="cars" id="cars" form="carform">
+          <option value="amsterdam">Amsterdam</option>
+          <option value="utrecht">Utrecht</option>
+          <option value="rotterdam">Rotterdam</option>
+          <option value="the hague">The Hague</option>
+        </select>
       </div>
-    </form>
-    <script src="https://sendfox.com/js/form.js"></script>
+      <div class="footer-links Footer-tours">
+        <h6 class="subtitle">Tours</h6>
+        <%= link_to "Offer your Tours", root_path %>
+        <%= link_to "Features", root_path %>
+        <%= link_to "Tutorials", root_path %>
+        <%= link_to "Process", root_path %>
+        <%= link_to "Releases", root_path %>
+      </div>
+      <div class="footer-links">
+        <h6 class="subtitle">Company</h6>
+        <%= link_to "About Us", root_path %>
+        <%= link_to "Blog", root_path %>
+        <%= link_to "Careers", root_path %>
+        <%= link_to "Contact", root_path %>
+        <%= link_to "Press", root_path %>
+      </div>
+      <div class="footer-links">
+        <h6 class="subtitle">Support</h6>
+        <%= link_to "Cookies Policy", root_path %>
+        <%= link_to "Privacy Policy", root_path %>
+        <%= link_to "Terms of Use", root_path %>
+        <%= link_to "Legal", root_path %>
+        <%= link_to "Sitemap", root_path %>
+      </div>
+    </div>
+    <hr class="footer-hr ">
+
+    <div class="custom-container copyright-social-media">
+      <p class="text-center">&copy;2021 Tour of the Day. All right reserved</p>
+      <div class="footer-social">
+        <i class="fab fa-facebook-f ml-4">
+        </i>
+        <i class="fab fa-instagram ml-2">
+        </i>
+        <i class="fab fa-twitter ml-2 ">
+        </i>
+        <i class="fab fa-pinterest-p ml-2">
+        </i>
+      </div>
+    </div>
+    <div id="back-top">
+    <a href="#">
+      <i class="fas fa-angle-up">
+      </i>
+    </a>
   </div>
-  <div>
-    <hr class="footer-hr my-4">
-  </div>
-  <div class="copyright d-flex justify-content-center">
-    <p>© 2021 Tours of the Day. All rights reserved.</p>
-  </div>
-</footer>
+  </footer>
+
+</section>
 
 
