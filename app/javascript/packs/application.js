@@ -34,6 +34,6 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   window.openProfile = openProfile;
   initStarRating();
-  initChatroomCable();
+  // initChatroomCable();
 });
 console.log('end of file');
