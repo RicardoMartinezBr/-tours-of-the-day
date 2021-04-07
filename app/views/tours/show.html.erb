@@ -1,7 +1,7 @@
 <div class="custom-container header-and-rating mt-3">
-  <h1><%= @tour.name %></h1>
+  <h1><%= @tour.city %>: <%= @tour.name %></h1>
   <div class="d-flex justify-content-between mt-3">
-    <p>100 reviews</p>
+    <p> <i class="fas fa-star"></i> <%= @tour.average_rating %> (<%= @tour.reviews.count%> <%= @tour.reviews.count > 1 ? "reviews" : "review" %>)</p>
     <span>Add to favorite</span>
   </div>
 </div>

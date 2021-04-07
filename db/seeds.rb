@@ -24,7 +24,7 @@ Tour.destroy_all
 
 puts "Generating Tour"
 
-tour_1 = Tour.create(user_id:13, name: "The Hague City Tour", city: "The Hague", price: 300, category: "city tour", duration: "4", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
+tour_1 = Tour.create(user_id:13, name: "City Tour", city: "The Hague", price: 80, category: "city tour", duration: "4", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
 tour_1_image = URI.open("http://res.cloudinary.com/dynirwhqr/image/upload/22o4lfdnpe49q1fer5y4sdu7vwc7")
 tour_2_image = URI.open("https://images.unsplash.com/photo-1586174035695-35ab9e19215c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8dGhlJTIwaGFndWV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_3_image = URI.open("https://images.unsplash.com/photo-1593439426324-71b3f44ca9ee?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8dGhlJTIwaGFndWV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
@@ -37,7 +37,7 @@ tour_1.photos.attach(io: tour_4_image, filename: "tourimg4.png", content_type: "
 tour_1.photos.attach(io: tour_5_image, filename: "tourimg5.png", content_type: "image/png")
 tour_1.save!
 
-tour_2 = Tour.create(user_id:13, name: "Amsterdam City Tour", city: "Amsterdam", price: 300, category: "city tour", duration: "4", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
+tour_2 = Tour.create(user_id:13, name: "City Tour", city: "Amsterdam", price: 130, category: "city tour", duration: "4", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
 tour_6_image = URI.open("https://images.unsplash.com/photo-1558551649-e44c8f992010?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8YW1zdGVyZGFtfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_7_image = URI.open("https://images.unsplash.com/photo-1586174035695-35ab9e19215c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8dGhlJTIwaGFndWV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_8_image = URI.open("https://images.unsplash.com/photo-1541962830671-c47e0494f0f3?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTZ8fGFtc3RlcmRhbXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
@@ -50,7 +50,7 @@ tour_2.photos.attach(io: tour_9_image, filename: "tourimg9.png", content_type: "
 tour_2.photos.attach(io: tour_10_image, filename: "tourimg10.png", content_type: "image/png")
 tour_2.save!
 
-tour_3 = Tour.create(user_id:13, name: "Amsterdam Boat Tour", city: "Amsterdam", price: 300, category: "boat tour", duration: "3", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
+tour_3 = Tour.create(user_id:13, name: "Boat Tour", city: "Amsterdam", price: 300, category: "boat tour", duration: "3", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
 tour_11_image = URI.open("https://images.unsplash.com/photo-1529943247435-a5974e63d6e4?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTR8fGFtc3RlcmRhbXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_12_image = URI.open("https://images.unsplash.com/photo-1586174035695-35ab9e19215c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8dGhlJTIwaGFndWV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_13_image = URI.open("https://images.unsplash.com/photo-1605704320412-5c3255bf47a9?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YW1zdGVyZGFtJTIwYm9hdHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
@@ -63,7 +63,7 @@ tour_3.photos.attach(io: tour_14_image, filename: "tourimg14.png", content_type:
 tour_3.photos.attach(io: tour_15_image, filename: "tourimg15.png", content_type: "image/png")
 tour_3.save!
 
-tour_4 = Tour.create(user_id:13, name: "Keukenhof", city: "Lise", price: 300, category: "keukenhof", duration: "3", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
+tour_4 = Tour.create(user_id:13, name: "Keukenhof", city: "Lise", price: 130, category: "keukenhof", duration: "3", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
 tour_16_image = URI.open("https://images.unsplash.com/photo-1597998523552-db3bf55207e1?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8a2V1a2VuaG9mfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_17_image = URI.open("https://images.unsplash.com/photo-1599725396833-6b96520b550e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8a2V1a2VuaG9mfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_18_image = URI.open("https://images.unsplash.com/photo-1520633713890-f5ebb76e727b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8a2V1a2VuaG9mfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
@@ -76,7 +76,7 @@ tour_4.photos.attach(io: tour_19_image, filename: "tourimg19.png", content_type:
 tour_4.photos.attach(io: tour_20_image, filename: "tourimg20.png", content_type: "image/png")
 tour_4.save!
 
-tour_5 = Tour.create(user_id:13, name: "Flower Fields", city: "Lise", price: 300, category: "keukenhof", duration: "1,5", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
+tour_5 = Tour.create(user_id:13, name: "Flower Fields", city: "Lise", price: 99, category: "keukenhof", duration: "1,5", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
 tour_21_image = URI.open("https://images.unsplash.com/photo-1556526945-0a2ef2955165?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDd8fGtldWtlbmhvZnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_22_image = URI.open("https://images.unsplash.com/photo-1556526945-0a2ef2955165?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8a2V1a2VuaG9mJTIwZmllbGR8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_23_image = URI.open("https://images.unsplash.com/photo-1559027740-b754cd6c3da5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OHx8a2V1a2VuaG9mJTIwZmllbGR8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
@@ -89,7 +89,7 @@ tour_5.photos.attach(io: tour_24_image, filename: "tourimg24.png", content_type:
 tour_5.photos.attach(io: tour_25_image, filename: "tourimg25.png", content_type: "image/png")
 tour_5.save!
 
-tour_6 = Tour.create(user_id:13, name: "Utrecht City Tour", city: "Utrecht", price: 300, category: "city tour", duration: "5", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
+tour_6 = Tour.create(user_id:13, name: "City Tour", city: "Utrecht", price: 160, category: "city tour", duration: "5", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
 tour_26_image = URI.open("https://images.unsplash.com/photo-1600506113428-6bca08071925?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTR8fHV0cmVjaHR8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_27_image = URI.open("https://images.unsplash.com/photo-1523961738618-3c1dde78b4c6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OHx8dXRyZWNodHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_28_image = URI.open("https://images.unsplash.com/photo-1610399460836-ea8f879ca5b3?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjR8fHV0cmVjaHR8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
@@ -102,7 +102,7 @@ tour_6.photos.attach(io: tour_29_image, filename: "tourimg29.png", content_type:
 tour_6.photos.attach(io: tour_30_image, filename: "tourimg30.png", content_type: "image/png")
 tour_6.save!
 
-tour_7 = Tour.create(user_id:13, name: "Rotterdam City Tour", city: "Rotterdam", price: 300, category: "city tour", duration: "6", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
+tour_7 = Tour.create(user_id:13, name: "City Tour", city: "Rotterdam", price: 190, category: "city tour", duration: "6", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
 tour_31_image = URI.open("https://images.unsplash.com/photo-1541944766239-695501c0c318?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8cm90dGVyZGFtfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_32_image = URI.open("https://images.unsplash.com/photo-1465032995827-c3dce1d71c2a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8cm90dGVyZGFtfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_33_image = URI.open("https://images.unsplash.com/photo-1565613057453-a9ab37f87351?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fHJvdHRlcmRhbXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
@@ -115,7 +115,7 @@ tour_7.photos.attach(io: tour_34_image, filename: "tourimg34.png", content_type:
 tour_7.photos.attach(io: tour_35_image, filename: "tourimg35.png", content_type: "image/png")
 tour_7.save!
 
-tour_8 = Tour.create(user_id:13, name: "Windmill Village Tour", city: "Zaanse Schans", price: 300, category: "city tour", duration: "4", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
+tour_8 = Tour.create(user_id:13, name: "Windmill Village Tour", city: "Zaanse Schans", price: 200, category: "city tour", duration: "4", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
 tour_36_image = URI.open("https://images.unsplash.com/photo-1563800037628-2b1bfb1876f2?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fHdpbmRtaWxsJTIwaG9sbGFuZHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_37_image = URI.open("https://images.unsplash.com/photo-1566974698838-df9f8c07a639?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8emFuc2UlMjBzY2hhbnN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_38_image = URI.open("https://images.unsplash.com/photo-1566450653303-2614cbb292ea?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8emFuc2UlMjBzY2hhbnN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
@@ -128,7 +128,7 @@ tour_8.photos.attach(io: tour_39_image, filename: "tourimg39.png", content_type:
 tour_8.photos.attach(io: tour_40_image, filename: "tourimg40.png", content_type: "image/png")
 tour_8.save!
 
-tour_9 = Tour.create(user_id:13, name: "Amsterdam Bike Tour", city: "Amsterdam", price: 300, category: "bike tour", duration: "2", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
+tour_9 = Tour.create(user_id:13, name: "Bike Tour", city: "Amsterdam", price: 175, category: "bike tour", duration: "2", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
 tour_41_image = URI.open("https://images.unsplash.com/photo-1524047934617-cb782c24e5f3?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YmlrZSUyMCUyMGFtc3RlcmRhbXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_42_image = URI.open("https://images.unsplash.com/photo-1613163890954-479492c97b8a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YW1zdGVyZGFtJTIwYmlrZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_43_image = URI.open("https://images.unsplash.com/photo-1612270237088-d1262c013709?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8YW1zdGVyZGFtJTIwYmlrZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
@@ -141,7 +141,7 @@ tour_9.photos.attach(io: tour_44_image, filename: "tourimg44.png", content_type:
 tour_9.photos.attach(io: tour_45_image, filename: "tourimg45.png", content_type: "image/png")
 tour_9.save!
 
-tour_10 = Tour.create(user_id:13, name: "Amsterdam Night Tour", city: "Amsterdam", price: 180, category: "bike tour", duration: "2", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
+tour_10 = Tour.create(user_id:13, name: "Night Tour", city: "Amsterdam", price: 180, category: "bike tour", duration: "2", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
 tour_46_image = URI.open("https://images.unsplash.com/photo-1590175873761-c67bf2ecf3f8?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8YW1zdGVyZGFtJTIwbmlnaHR8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_47_image = URI.open("https://images.unsplash.com/photo-1523113501336-6ea4a7d6660d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8YW1zdGVyZGFtJTIwbmlnaHR8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_48_image = URI.open("https://images.unsplash.com/photo-1577365038380-caa2b2eb3b97?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fGFtc3RlcmRhbSUyMG5pZ2h0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
@@ -154,7 +154,7 @@ tour_10.photos.attach(io: tour_49_image, filename: "tourimg49.png", content_type
 tour_10.photos.attach(io: tour_50_image, filename: "tourimg50.png", content_type: "image/png")
 tour_10.save!
 
-tour_11 = Tour.create(user_id:13, name: "Amsterdam Museum Tour", city: "Amsterdam", price: 230, category: "bike tour", duration: "2", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
+tour_11 = Tour.create(user_id:13, name: "Museum Tour", city: "Amsterdam", price: 230, category: "bike tour", duration: "2", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
 tour_51_image = URI.open("https://images.unsplash.com/photo-1499762524203-b47f7b1b26a5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8bXVzZXVtJTIwYW1zdGVyZGFtfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_52_image = URI.open("https://images.unsplash.com/photo-1514905552197-0610a4d8fd73?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8bXVzZXVtJTIwYW1zdGVyZGFtfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_53_image = URI.open("https://images.unsplash.com/photo-1589874103322-b51ff168a35d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8bXVzZXVtJTIwYW1zdGVyZGFtfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
@@ -167,7 +167,7 @@ tour_11.photos.attach(io: tour_54_image, filename: "tourimg54.png", content_type
 tour_11.photos.attach(io: tour_55_image, filename: "tourimg55.png", content_type: "image/png")
 tour_11.save!
 
-tour_12 = Tour.create(user_id:13, name: "Amsterdam Food Tour", city: "Amsterdam", price: 110, category: "bike tour", duration: "2", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
+tour_12 = Tour.create(user_id:13, name: "Food Tour", city: "Amsterdam", price: 110, category: "bike tour", duration: "2", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
 tour_56_image = URI.open("https://images.unsplash.com/photo-1548091960-fa93ce7f544d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8Zm9vZCUyMGFtc3RlcmRhbXxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=800&q=60")
 tour_57_image = URI.open("https://images.unsplash.com/photo-1552691562-ca24c2d53fda?ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8Zm9vZCUyMGFtc3RlcmRhbXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_58_image = URI.open("https://images.unsplash.com/photo-1599894555091-71db8e565f63?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTV8fGZvb2QlMjBhbXN0ZXJkYW18ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
@@ -180,7 +180,7 @@ tour_12.photos.attach(io: tour_59_image, filename: "tourimg59.png", content_type
 tour_12.photos.attach(io: tour_60_image, filename: "tourimg60.png", content_type: "image/png")
 tour_12.save!
 
-tour_13 = Tour.create(user_id:13, name: "Private Bike Tour Amsterdam", city: "Amsterdam", price: 300, category: "bike tour", duration: "2", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
+tour_13 = Tour.create(user_id:13, name: "Bike Tour Amsterdam", city: "Amsterdam", price: 299, category: "bike tour", duration: "2", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
 tour_61_image = URI.open("https://images.unsplash.com/photo-1524047934617-cb782c24e5f3?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YmlrZSUyMCUyMGFtc3RlcmRhbXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_62_image = URI.open("https://images.unsplash.com/photo-1586174035695-35ab9e19215c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8dGhlJTIwaGFndWV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_63_image = URI.open("https://images.unsplash.com/photo-1606988898144-b4e1169b93ef?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mjd8fGFtc3RlcmRhbSUyMG1hcmtldHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
@@ -193,7 +193,7 @@ tour_13.photos.attach(io: tour_64_image, filename: "tourimg64.png", content_type
 tour_13.photos.attach(io: tour_65_image, filename: "tourimg65.png", content_type: "image/png")
 tour_13.save!
 
-tour_14 = Tour.create(user_id:13, name: "Amsterdam Market Tour", city: "Amsterdam", price: 300, category: "bike tour", duration: "2", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
+tour_14 = Tour.create(user_id:13, name: "Market Tour", city: "Amsterdam", price: 210, category: "bike tour", duration: "2", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
 tour_66_image = URI.open("https://images.unsplash.com/photo-1596878477485-578740d1b987?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fGFtc3RlcmRhbSUyMG1hcmtldHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_67_image = URI.open("https://images.unsplash.com/photo-1570738149267-f80bdc31bfc9?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTV8fGFtc3RlcmRhbSUyMG1hcmtldHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_68_image = URI.open("https://images.unsplash.com/photo-1588099140103-eb7e0ae84d00?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YW1zdGVyZGFtJTIwbWFya2V0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
@@ -206,7 +206,7 @@ tour_14.photos.attach(io: tour_69_image, filename: "tourimg69.png", content_type
 tour_14.photos.attach(io: tour_70_image, filename: "tourimg70.png", content_type: "image/png")
 tour_14.save!
 
-tour_15 = Tour.create(user_id:13, name: "Amsterdam Children Tour", city: "Amsterdam", price: 300, category: "bike tour", duration: "2", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
+tour_15 = Tour.create(user_id:13, name: "Children Tour", city: "Amsterdam", price: 79, category: "bike tour", duration: "2", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
 tour_71_image = URI.open("https://images.unsplash.com/photo-1564522011569-df2ac9f3702a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8YW1zdGVyZGFtJTIwY2hpbGRyZW58ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_72_image = URI.open("https://images.unsplash.com/photo-1597138153220-0078b454524f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8bmVtbyUyMG11c2V1bXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_73_image = URI.open("https://images.unsplash.com/photo-1571942168622-ed3577154879?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8bmVtbyUyMG11c2V1bXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
@@ -219,7 +219,7 @@ tour_15.photos.attach(io: tour_74_image, filename: "tourimg74.png", content_type
 tour_15.photos.attach(io: tour_75_image, filename: "tourimg75.png", content_type: "image/png")
 tour_15.save!
 
-tour_16 = Tour.create(user_id:13, name: "Beer Experience Tour", city: "Amsterdam", price: 300, category: "bike tour", duration: "2", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
+tour_16 = Tour.create(user_id:13, name: "Beer Experience Tour", city: "Amsterdam", price: 199, category: "bike tour", duration: "2", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
 tour_76_image = URI.open("https://images.unsplash.com/photo-1612528443702-f6741f70a049?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OHx8ZHV0Y2glMjBiZWVyfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_77_image = URI.open("https://images.unsplash.com/photo-1579106391617-bf9edae36907?ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8ZHV0Y2glMjBiZWVyfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_78_image = URI.open("https://images.unsplash.com/photo-1586657596646-d4af5922ab47?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTR8fGR1dGNoJTIwYmVlcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
@@ -232,7 +232,7 @@ tour_16.photos.attach(io: tour_79_image, filename: "tourimg79.png", content_type
 tour_16.photos.attach(io: tour_80_image, filename: "tourimg80.png", content_type: "image/png")
 tour_16.save!
 
-tour_17 = Tour.create(user_id:13, name: "Amsterdam Private Tour", city: "Amsterdam", price: 300, category: "bike tour", duration: "2", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
+tour_17 = Tour.create(user_id:13, name: "Private Tour", city: "Amsterdam", price: 220, category: "bike tour", duration: "2", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
 tour_81_image = URI.open("https://images.unsplash.com/photo-1575936444724-1cd7baee8ec2?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fGFtc3RlcmRhbSUyMHN1bW1lcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_82_image = URI.open("https://images.unsplash.com/photo-1534352177297-185dbcb2dfde?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTN8fGFtc3RlcmRhbSUyMHN1bW1lcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_83_image = URI.open("https://images.unsplash.com/photo-1546631476-4586506a4fdf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjR8fGFtc3RlcmRhbSUyMHN1bW1lcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
@@ -245,7 +245,7 @@ tour_17.photos.attach(io: tour_84_image, filename: "tourimg84.png", content_type
 tour_17.photos.attach(io: tour_85_image, filename: "tourimg85.png", content_type: "image/png")
 tour_17.save!
 
-tour_18 = Tour.create(user_id:13, name: "Museum Guided Tour", city: "Amsterdam", price: 300, category: "bike tour", duration: "2", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
+tour_18 = Tour.create(user_id:13, name: "Museum Guided Tour", city: "Amsterdam", price: 150, category: "bike tour", duration: "2", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
 tour_86_image = URI.open("https://images.unsplash.com/photo-1615829358109-8187aa2a0856?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDB8fGFtc3RlcmRhbSUyMHN1bW1lcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_87_image = URI.open("https://images.unsplash.com/photo-1586174035695-35ab9e19215c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8dGhlJTIwaGFndWV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_88_image = URI.open("https://images.unsplash.com/photo-1615829358148-91d29bc0099f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NjR8fGFtc3RlcmRhbSUyMHN1bW1lcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
@@ -258,7 +258,7 @@ tour_18.photos.attach(io: tour_89_image, filename: "tourimg89.png", content_type
 tour_18.photos.attach(io: tour_90_image, filename: "tourimg90.png", content_type: "image/png")
 tour_18.save!
 
-tour_19 = Tour.create(user_id:13, name: "Utrecht and Rotterdam Day Trip", city: " Utrecht, Rotterdam", price: 300, category: "bike tour", duration: "2", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
+tour_19 = Tour.create(user_id:13, name: "Day Trip", city: " Utrecht and Rotterdam", price: 299, category: "bike tour", duration: "2", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
 tour_91_image = URI.open("https://images.unsplash.com/photo-1553937028-f06174f6feb8?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NTl8fGFtc3RlcmRhbSUyMHN1bW1lcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_92_image = URI.open("https://images.unsplash.com/photo-1561333219-e0c509ad9e2f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NzF8fGFtc3RlcmRhbSUyMHN1bW1lcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_93_image = URI.open("https://images.unsplash.com/photo-1519662647148-fff8e00fe4ac?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fHV0cmVjaHR8ZW58MHx8MHw%3D&auto=format&fit=crop&w=800&q=60")
@@ -271,7 +271,7 @@ tour_19.photos.attach(io: tour_94_image, filename: "tourimg94.png", content_type
 tour_19.photos.attach(io: tour_95_image, filename: "tourimg95.png", content_type: "image/png")
 tour_19.save!
 
-tour_20 = Tour.create(user_id:13, name: "Airport Transfer", city: "Amsterdam", price: 300, category: "bike tour", duration: "2", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
+tour_20 = Tour.create(user_id:13, name: "Airport Transfer", city: "Amsterdam", price: 110, category: "bike tour", duration: "2", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
 tour_96_image = URI.open("https://images.unsplash.com/photo-1557689879-7a4a3cf1576d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjZ8fHByaXZhdGUlMjBjYXJ8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_97_image = URI.open("https://images.unsplash.com/photo-1571095818584-3879e717a3f6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8ODV8fGFpcnBvcnQlMjBzaHV0bGxlfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_98_image = URI.open("https://images.unsplash.com/photo-1589285243981-5d883d076bc7?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTAxfHxhaXJwb3J0JTIwc2h1dGxsZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
@@ -284,7 +284,7 @@ tour_20.photos.attach(io: tour_99_image, filename: "tourimg99.png", content_type
 tour_20.photos.attach(io: tour_100_image, filename: "tourimg100.png", content_type: "image/png")
 tour_20.save!
 
-tour_21 = Tour.create(user_id:13, name: "Amsterdam Tour During Layover", city: "Amsterdam", price: 300, category: "bike tour", duration: "2", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
+tour_21 = Tour.create(user_id:13, name: "Tour During Layover", city: "Amsterdam", price: 240, category: "bike tour", duration: "2", description: "Seing Amsterdam by Bike is one of best way to experience the city like a local as biking is the most famous means of transportation around the cities in the Netherlands.")
 tour_101_image = URI.open("https://images.unsplash.com/photo-1459679749680-18eb1eb37418?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8YW1zdGVyZGFtfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_102_image = URI.open("https://images.unsplash.com/photo-1524047934617-cb782c24e5f3?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8YW1zdGVyZGFtfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 tour_103_image = URI.open("https://images.unsplash.com/photo-1518622923628-f909e4f7c583?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTd8fGFtc3RlcmRhbXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
@@ -296,5 +296,37 @@ tour_21.photos.attach(io: tour_103_image, filename: "tourimg103.png", content_ty
 tour_21.photos.attach(io: tour_104_image, filename: "tourimg104.png", content_type: "image/png")
 tour_21.photos.attach(io: tour_105_image, filename: "tourimg105.png", content_type: "image/png")
 tour_21.save!
+
+tour_22 = Tour.create(user_id:13, name: "City Tour", city: "Sao Paulo", price: 199, category: "city tour", duration: "4", description: "In this tour you will see Brazil's largest city and its amazing culture.")
+tour_106_image = URI.open("https://images.unsplash.com/photo-1543059080-f9b1272213d5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c2FvJTIwcGF1bG98ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
+tour_107_image = URI.open("https://images.unsplash.com/photo-1598900923692-be0026a184ce?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTh8fHNhbyUyMHBhdWxvfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
+tour_108_image = URI.open("https://images.unsplash.com/photo-1544788294-3ad830b5c3d7?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mjh8fHNhbyUyMHBhdWxvfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
+tour_109_image = URI.open("https://images.unsplash.com/photo-1470160710819-b3bd5ec85c66?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mzl8fHNhbyUyMHBhdWxvfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
+tour_110_image = URI.open("https://images.unsplash.com/photo-1579642026628-a4106297a826?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTE3fHxzYW8lMjBwYXVsb3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
+tour_22.photos.attach(io: tour_106_image, filename: "tourimg106.png", content_type: "image/png")
+tour_22.photos.attach(io: tour_107_image, filename: "tourimg107.png", content_type: "image/png")
+tour_22.photos.attach(io: tour_108_image, filename: "tourimg108.png", content_type: "image/png")
+tour_22.photos.attach(io: tour_109_image, filename: "tourimg109.png", content_type: "image/png")
+tour_22.photos.attach(io: tour_110_image, filename: "tourimg110.png", content_type: "image/png")
+tour_22.save!
+
+tour_23 = Tour.create(user_id:13, name: "City Tour", city: "Rio de Janeiro", price: 199, category: "city tour", duration: "7", description: "In our Rio city tour you will see the most amazing touristic stops and the special sight seeing that you only get with tour of the day!")
+tour_111_image = URI.open("https://images.unsplash.com/photo-1483729558449-99ef09a8c325?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cmlvJTIwZGUlMjBqYW5laXJvfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
+tour_112_image = URI.open("https://images.unsplash.com/photo-1583275479278-7bc72a16c2ae?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8cmlvJTIwZGUlMjBqYW5laXJvfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
+tour_113_image = URI.open("https://images.unsplash.com/photo-1594749794764-717b02dbb530?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTR8fHJpbyUyMGRlJTIwamFuZWlyb3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
+tour_114_image = URI.open("https://images.unsplash.com/photo-1605648373083-7cb241939ae8?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTh8fHJpbyUyMGRlJTIwamFuZWlyb3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
+tour_115_image = URI.open("https://images.unsplash.com/photo-1543958871-ccfa180a0c39?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NTN8fHJpbyUyMGRlJTIwamFuZWlyb3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
+tour_23.photos.attach(io: tour_111_image, filename: "tourimg111.png", content_type: "image/png")
+tour_23.photos.attach(io: tour_112_image, filename: "tourimg112.png", content_type: "image/png")
+tour_23.photos.attach(io: tour_113_image, filename: "tourimg113.png", content_type: "image/png")
+tour_23.photos.attach(io: tour_114_image, filename: "tourimg114.png", content_type: "image/png")
+tour_23.photos.attach(io: tour_115_image, filename: "tourimg115.png", content_type: "image/png")
+tour_23.save!
+
+
+
+
+
+
 
 puts "Tour created"

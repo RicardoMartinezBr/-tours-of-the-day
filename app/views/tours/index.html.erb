@@ -1,6 +1,6 @@
-<div class="custom-container">
+<div class="">
   <h1>Here go all tours</h1>
-  <div class="row">
+  <div class="row cards-wrapper">
     <% @tours.each do |tour| %>
       <div class="col-sm-8 col-md-4 col-lg-3 card-trip">
         <% if tour.photos.attached? %>
@@ -12,10 +12,12 @@
         <div class="card-trip-infos">
           <div>
             <%= link_to tour_path(tour), class: "index-link pb-1" do %>
-              <h2><%= tour.name %></h2>
+              <h2><%= tour.city %>: <%= tour.name %></h2>
             <% end %>
-            <p><%= tour.description&.truncate(25, separator: " ") %></p>
-            <p><b><%= tour.city %> </b></p>
+            <p class="mt-2 rating-index-style"> <i class="fas fa-star"></i> <%= tour.average_rating %> (<%= tour.reviews.count%> <%= tour.reviews.count > 1 ? "reviews" : "review" %>)</p>
+            <p class="mt-2 tour-duration-index"><i class="far fa-clock"></i> <%= tour.duration %> <%= tour.duration == 1 ? "hour" : "hours" %></p>
+            <!-- <p class="mt-2"><%= tour.description&.truncate(50, separator: " ") %></p> -->
+
           </div>
           <h2 class="card-trip-pricing">€<%= tour.price %></h2>
           <% if tour.user.avatar.attached? %>
