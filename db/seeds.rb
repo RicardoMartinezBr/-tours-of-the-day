@@ -323,10 +323,18 @@ tour_23.photos.attach(io: tour_114_image, filename: "tourimg114.png", content_ty
 tour_23.photos.attach(io: tour_115_image, filename: "tourimg115.png", content_type: "image/png")
 tour_23.save!
 
-
-
-
-
+tour_24 = Tour.create(user_id:13, name: "Foz do Iguaçu", city: "Iguaçu", price: 120, category: "city tour", duration: "6", description: "The most wow waterfall in south america, with this tour you have the option to see the Foz do Iguaçu from the Brazilian side or if you can and want we can also cross to argentina where it also shows and amazing angle for the water fall.")
+tour_116_image = URI.open("https://images.unsplash.com/photo-1545832063-74f2d924b61a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fGZveiUyMGRvJTIwaWd1YWN1fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
+tour_117_image = URI.open("https://images.unsplash.com/photo-1574630121065-b420516424c4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1334&q=80")
+tour_118_image = URI.open("https://images.unsplash.com/photo-1575323543893-8ed59cf6d2c1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80")
+tour_119_image =URI.open("https://images.unsplash.com/photo-1605784893435-95a45d7ef5e4?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjR8fGZveiUyMGRvJTIwaWd1YSVDMyVBN3V8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
+tour_120_image = URI.open("https://images.unsplash.com/photo-1575324170566-0db95a8b2a75?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzJ8fGZveiUyMGRvJTIwaWd1YSVDMyVBN3V8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
+tour_24.photos.attach(io: tour_116_image, filename: "tourimg116.png", content_type: "image/png")
+tour_24.photos.attach(io: tour_117_image, filename: "tourimg117.png", content_type: "image/png")
+tour_24.photos.attach(io: tour_118_image, filename: "tourimg118.png", content_type: "image/png")
+tour_24.photos.attach(io: tour_119_image, filename: "tourimg119.png", content_type: "image/png")
+tour_24.photos.attach(io: tour_120_image, filename: "tourimg120.png", content_type: "image/png")
+tour_24.save!
 
 
 puts "Tour created"

@@ -1,0 +1,38 @@
+.reservation-form{
+  width:400px;
+  border: solid 1px rgb(200, 200, 200);
+  border-radius:5px;
+  padding:20px;
+}
+
+.yellow-waiting{
+  background-color: #FFFDC6;
+}
+
+.red-declined {
+  background-color: rgba(214, 40, 57, 0.15) ;
+}
+
+.green-approved{
+  background-color: #DDFFE0;
+
+}
+
+.booking-status{
+  width: max-content;
+  padding:0 5px;
+}
+
+.decrease-card-height{
+  height:250px;
+}
+
+.decrease-image-size{
+  height:250px;
+  width:auto;
+  object-fit:cover;
+}
+
+.card-body a:hover{
+  text-decoration:none;
+}
