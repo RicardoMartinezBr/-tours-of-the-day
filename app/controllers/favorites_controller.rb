@@ -9,7 +9,7 @@ class FavoritesController < ApplicationController
     @favorite.user = current_user
     @tour = Tour.find(params[:tour_id])
     @favorite.tour = @tour
-    authorize(@favorite)
+    # authorize(@favorite)
     @favorite.save
     respond_to do |format|
       format.html { redirect_back(fallback_location: root_path) }
@@ -19,7 +19,7 @@ class FavoritesController < ApplicationController
 
   def destroy
     @favorite = Favorite.find(params[:id])
-    authorize(@favorite)
+    # authorize(@favorite)
     @tour = @favorite.tour
     @favorite.destroy
     respond_to do |format|

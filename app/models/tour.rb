@@ -22,13 +22,13 @@ class Tour < ApplicationRecord
     else
       sum = 0
       reviews.each do |review|
-        sum += review.photographer_rating
+        sum += review.tour_rating
       end
       (sum.to_f / reviews.length).round(2)
     end
   end
 
   def favorited?(current_user)
-    Favorite.find_by(user_id: current_user.id, portfolio_id: id)
+    Favorite.find_by(user_id: current_user.id, tour_id: id)
   end
 end

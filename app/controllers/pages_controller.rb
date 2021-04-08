@@ -11,7 +11,8 @@ class PagesController < ApplicationController
     # @tour.user = @user
     @favorites = current_user.favorites
     @reservation = Reservation.new
-    # @reservations = Reservation.all
+    @reservations = Reservation.all
+    @tours = Tour.all
     # @chatroom = Chatroom.find_or_create_by(portfolio: @portfolio, user: current_user)
   end
 end

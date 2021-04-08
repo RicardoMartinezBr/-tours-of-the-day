@@ -8,7 +8,7 @@
     <div class="container">
       <div class="text-center">
       <%#= cl_image_tag @tour.photo.key, class: "carousel-profile-size", width: '700px', height: 'auto'%>
-      <%= render "myprofile-carousel" %>
+      <%= render "../tours/carousel" %>
       <p id="index-price">$ <%= @tour.price %> /day</p>
       <p id="index-description"><%= @tour.description&.truncate(140, separator: " ") %></p>
       </div>

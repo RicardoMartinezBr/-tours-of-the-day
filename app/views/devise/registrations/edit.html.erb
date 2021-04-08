@@ -29,7 +29,9 @@
                 <label class="btn btn-dark">
                   <i class="fas fa-images"></i> Add photos to your tour
                   <span style="display:none;">
-                    <%= f.input :avatar, as: :file, input_html: { multiple: true } %>
+    <%= f.input :photo,
+                as: :file,
+                input_html: { multiple: true } %>
                   </span>
                 </label>
   </div>

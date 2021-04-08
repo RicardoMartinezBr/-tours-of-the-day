@@ -2,7 +2,7 @@
   <h1><%= @tour.city %>: <%= @tour.name %></h1>
   <div class="d-flex justify-content-between mt-3">
     <p> <i class="fas fa-star"></i> <%= @tour.average_rating %> (<%= @tour.reviews.count%> <%= @tour.reviews.count > 1 ? "reviews" : "review" %>)</p>
-    <div>Add to favorite</div>
+    <div> <%= render "favorite" %> Add to favorite</div>
   </div>
 </div>
 
