@@ -4,36 +4,41 @@
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
-    <%= f.input :first_name, required: true, autofocus: true %>
-    <%= f.input :last_name, required: true, autofocus: true %>
-    <%= f.input :location, required: true, autofocus: true,
-    hint: "E.g São Paulo, Brazil" %>
+  <div class="form-inputs row">
+
+    <div class="col-sm-12 col-lg-4"> <%= f.input :first_name, required: true, autofocus: true %></div>
+    <div class="col-sm-12 col-lg-4"> <%= f.input :last_name, required: true, autofocus: true %></div>
+    <div class="col-sm-12 col-lg-4"> <%= f.input :location, required: true, autofocus: true %></div>
+    <div class="col-sm-12 col-lg-12"> <%= f.input :email, required: true, autofocus: true %></div>
+
+
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
     <% end %>
 
-    <%= f.input :password,
+    <div class="col-sm-12 col-lg-6" > <%= f.input :password,
                 hint: "leave it blank if you don't want to change it",
                 required: false,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
+                input_html: { autocomplete: "new-password" } %> </div>
+    <div class="col-sm-12 col-lg-6" > <%= f.input :password_confirmation,
                 required: false,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :current_password,
+                input_html: { autocomplete: "new-password" } %> </div>
+    <div class="col-sm-12 col-lg-12" > <%= f.input :current_password,
                 hint: "we need your current password to confirm your changes",
                 required: true,
-                input_html: { autocomplete: "current-password" } %>
-                <label class="btn btn-dark">
-                  <i class="fas fa-images"></i> Add photos to your tour
-                  <span style="display:none;">
-    <%= f.input :photo,
-                as: :file,
-                input_html: { multiple: true } %>
-                  </span>
-                </label>
+                input_html: { autocomplete: "current-password" } %> </div>
+                <!-- <label class="btn btn-dark">
+                  <i class="fas fa-images"></i> Add photos to your tour -->
+                  <!-- <span style="display:none;"> -->
+    <div class="col-sm-12 col-lg-12"> <%= f.input :avatar, as: :file %> </div>
+
+                  <!-- </span> -->
+                <!-- </label> -->
+
+  </div>
+  <div class="col-sm-12 col-lg-4">
+    <%= cl_image_tag current_user.avatar.key, class: "preview-avatar p-2 border my-3 ", width: 150  %>
   </div>
 
   <div class="form-actions">
