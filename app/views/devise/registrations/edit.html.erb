@@ -28,27 +28,29 @@
                 hint: "we need your current password to confirm your changes",
                 required: true,
                 input_html: { autocomplete: "current-password" } %> </div>
-                <!-- <label class="btn btn-dark">
-                  <i class="fas fa-images"></i> Add photos to your tour -->
-                  <!-- <span style="display:none;"> -->
-    <div class="col-sm-12 col-lg-12"> <%= f.input :avatar, as: :file %> </div>
-
-                  <!-- </span> -->
-                <!-- </label> -->
+    <label class="btn btn-dark ml-lg-3">
+      <i class="fas fa-images"></i> Change avatar
+      <span style="display:none;">
+        <div class="col-sm-12 col-lg-12"> <%= f.input :avatar, as: :file %> </div>
+      </span>
+    </label>
 
   </div>
-  <div class="col-sm-12 col-lg-4">
-    <%= cl_image_tag current_user.avatar.key, class: "preview-avatar p-2 shadow my-3 ", width: 150  %>
-  </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Update Profile", class:'btn btn-primary' %>
-  </div>
+      <div class="col-sm-12 col-lg-12">
+        <div> <%= cl_image_tag current_user.avatar.key, class: "preview-avatar shadow my-3 " %> </div>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, "Update Profile", class:'btn btn-danger' %>
+
+      </div>
 <% end %>
 
-<h3>Cancel my account</h3>
 
-<p><%= link_to "Delete my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+  <h3>Cancel my account</h3>
 
-<%= link_to "Back", :back %>
+  <p><%= link_to "Delete my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+
+  <%= link_to "Back", :back %>
 </div>

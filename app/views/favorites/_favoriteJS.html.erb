@@ -1,10 +1,12 @@
-<% if @tour.favorited?(current_user) %>
-  <%= link_to favorite_path(tour.favorited?(current_user)), remote: true, class: "index-heart", method: :delete do  %>
-    <i class="fas fa-heart pl-2" style="color: #D62839"></i>
-  <% end %>
-<% else %>
-  <%= link_to(tour_favorites_path(:tour), remote: true, class: "index-heart", method: :post) do %>
-    <i class="far fa-heart pl-2" style="color: #D62839"></i>
+<% if user_signed_in? %>
+  <% if @tour.favorited?(current_user) %>
+    <%= link_to favorite_path(tour.favorited?(current_user)), remote: true, class: "index-heart", method: :delete do  %>
+      <i class="fas fa-heart pl-2" style="color: #D62839"></i> Favorite this tour
+    <% end %>
+  <% else %>
+    <%= link_to(tour_favorites_path(:tour), remote: true, class: "index-heart", method: :post) do %>
+      <i class="far fa-heart pl-2" style="color: #D62839"></i> Favorite this tour
+    <% end %>
   <% end %>
 <% end %>
 

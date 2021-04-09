@@ -27,7 +27,7 @@
 
 .tour-description-show {
   flex:2;
-  padding-right: 100px;
+  padding-right: 50px;
 }
 
 .booking-form {
@@ -41,6 +41,22 @@
 
 .description-booking-wrapper {
   display: flex;
+}
+
+.top-left-radius {
+  border-top-left-radius: 10px;
+}
+
+.top-right-radius {
+  border-top-right-radius: 10px;
+}
+
+.bottom-left-radius {
+   border-bottom-left-radius: 10px;
+}
+
+.bottom-right-radius {
+  border-bottom-right-radius: 10px;
 }
 
 @media (max-width: 800px){

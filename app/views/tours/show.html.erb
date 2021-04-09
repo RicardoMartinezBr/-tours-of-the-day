@@ -2,14 +2,14 @@
   <h1><%= @tour.city %>: <%= @tour.name %></h1>
   <div class="d-flex justify-content-between mt-3">
     <p> <i class="fas fa-star"></i> <%= @tour.average_rating %> (<%= @tour.reviews.count%> <%= @tour.reviews.count > 1 ? "reviews" : "review" %>)</p>
-    <div> <%= render "favorite" %> Add to favorite</div>
+    <div> <%= render "favorite" %></div>
   </div>
 </div>
 
 <div class="custom-container d-flex rounded-lg">
   <div class="side-carousel-image mr-2">
-    <%= cl_image_tag @tour.photos[1].key, class: "mb-2 show-image-size" %>
-    <%= cl_image_tag @tour.photos[2].key, class: "show-image-size" %>
+    <%= cl_image_tag @tour.photos[1].key, class: "mb-2 show-image-size top-left-radius" %>
+    <%= cl_image_tag @tour.photos[2].key, class: "show-image-size bottom-left-radius" %>
   </div>
 
   <div class="carousel">
@@ -17,8 +17,8 @@
   </div>
 
     <div class="side-carousel-image ml-2">
-    <%= cl_image_tag @tour.photos[3].key, class: "mb-2 show-image-size" %>
-    <%= cl_image_tag @tour.photos[4].key, class: "show-image-size" %>
+    <%= cl_image_tag @tour.photos[3].key, class: "mb-2 show-image-size top-right-radius" %>
+    <%= cl_image_tag @tour.photos[4].key, class: "show-image-size bottom-right-radius" %>
   </div>
 </div>
 

@@ -22,14 +22,19 @@ class ToursController < ApplicationController
   end
 
   def create
-    @tour = Tour.create(tour_params)
-    @user = current_user
-    @tour.user = @user
-    if @tour.save
-      redirect_to tour_path(@tour)
+    if current_user.role == "Admin" || current_user.role == "Tour Guide"
+      @tour = Tour.create(tour_params)
+      @user = current_user
+      @tour.user = @user
+      if @tour.save
+        redirect_to tour_path(@tour)
+      else
+        render :show
+      end
     else
-       render :show
+      render :index
     end
+
   end
 
   def edit
