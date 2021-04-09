@@ -1,47 +1,15 @@
 <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
   <div class="own-tour" id="own-tour">
     <h2 class="my-5">Your Tours:</h2>
-    <% if @tour.blank? %>
-    <p>You haven't published a tour yet!</p>
-    <% else %>
 
     <div class="container">
-      <div class="text-center">
-      <%#= cl_image_tag @tour.photo.key, class: "carousel-profile-size", width: '700px', height: 'auto'%>
-      <%= render "../tours/carousel" %>
-      <p id="index-price">$ <%= @tour.price %> /day</p>
-      <p id="index-description"><%= @tour.description&.truncate(140, separator: " ") %></p>
-      </div>
-
-      <div class="container show_page-container mt-5">
-          <div class="review-card-box-mytour">
-            <%= render "tours/reviewcards" %>
-          </div>
-      </div>
-
-      <div class="container show_page-container">
-        <% if current_user == @tour.user %>
-          <div class="d-flex">
-        <% if policy(@tour).update? %>
-          <div class="mx-2">
-            <%= link_to(edit_tour_path(@tour)) do %>
-              <i class="far fa-edit"></i>
-            <% end %>
-          </div>
-        <% end %>
-        <% if policy(@tour).destroy? %>
-          <div class="mb-3">
-            <%= link_to(@tour, method: :delete, data: { confirm: 'Are you sure?' }) do %>
-              <i class="far fa-trash-alt"></i>
-            <% end %>
-          </div>
-        <% end %>
-
-        </div>
+      <div class="row justify-content-center">
+        <% @tours.each do |tour| %>
+          <% if tour.user_id == current_user.id %>
+            <h2><%= tour.name %></h2>
+          <% end %>
         <% end %>
       </div>
-
     </div>
-    <% end %>
   </div>
 </div>

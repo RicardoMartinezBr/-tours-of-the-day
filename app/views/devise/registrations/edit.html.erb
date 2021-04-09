@@ -8,7 +8,7 @@
 
     <div class="col-sm-12 col-lg-4"> <%= f.input :first_name, required: true, autofocus: true %></div>
     <div class="col-sm-12 col-lg-4"> <%= f.input :last_name, required: true, autofocus: true %></div>
-    <div class="col-sm-12 col-lg-4"> <%= f.input :location, required: true, autofocus: true %></div>
+    <div class="col-sm-12 col-lg-4"> <%= f.input :location, label: "City", required: true, autofocus: true %></div>
     <div class="col-sm-12 col-lg-12"> <%= f.input :email, required: true, autofocus: true %></div>
 
 
@@ -47,10 +47,7 @@
       </div>
 <% end %>
 
+  <p class="mt-3"><%= link_to "Delete my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
-  <h3>Cancel my account</h3>
-
-  <p><%= link_to "Delete my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-  <%= link_to "Back", :back %>
+  <p> <%= link_to "Back", :back %> </p>
 </div>

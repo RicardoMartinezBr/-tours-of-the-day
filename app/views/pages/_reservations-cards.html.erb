@@ -1,31 +1,25 @@
-<% @reservations.each do |res| %>
-  <div class="card entire-card decrease-card-height" id="index-cards">
-    <div class="card-product-infos">
-      <div class="d-flex">
-        <%= cl_image_tag res.tour.photos[0].key, class: "decrease-image-size" %>
-        <div class="card-body ">
-          <div>
-            <%= link_to tour_path(res.tour), class: "index-cards" do %>
-            <h2 class="mb-3" id="index-tour"><%= res.tour.city %>: <%= res.tour.name %></h2>
-            <% end %>
-            <p id="index-description"> You requested <%= res.tour.name %>`s services for <strong> <%= res.date.strftime("%B %-d, %Y") %></strong>. </p>
-            <p id="index-description-approved-<%=res.id%> ">
-            <% if res.approved %>
-              <p class="green-approved booking-status"> <%= "Approved by #{res.tour.user.first_name}" %> (<%= link_to "Remove from dashboard?", reservation_path(res), method: :delete, class: "no-hover-decoration" %>)</p>
-              <% if res.review == nil %>
-                <p> <%= link_to "Rate this Tour", new_tour_reservation_review_path(res.tour, res)  %> </p>
-              <% end %>
-            <% elsif !res.approved && !res.declined %>
-              <p class="yellow-waiting booking-status"> <%= "Awating confirmation!" %> (<%= link_to "Cancel Reservation?", reservation_path(res), method: :delete, class: "no-hover-decoration" %>) </p>
-            <% else %>
-              <p class="red-declined booking-status"> <%= "Your request was declined by #{res.tour.user.first_name}" %> (<%= link_to "Remove from dashboard?", reservation_path(res), method: :delete, class: "no-hover-decoration" %>)</p>
-            <% end %>
-            </p>
-            <div id="index-price">Total € <%= res.tour.price %></div>
-            <!-- <p id="index-user">Listed by: <%= res.tour.user.first_name %></p> -->
-            </div>
-        </div>
-      </div>
+<div class="card-product">
+  <% @reservations.each do |res| %>
+    <%= cl_image_tag res.tour.photos[0].key, class: "decrease-image-size" %>
+    <div class="card-product-infos reservation-card-content-wrapper">
+      <%= link_to tour_path(res.tour), class: "index-cards" do %>
+        <h2 class="mb-3" id="index-tour"><%= res.tour.city %>: <%= res.tour.name %></h2>
+        <% end %>
+        <p id="index-description"> You booked <%= res.tour.name %> for <strong> <%= res.date.strftime("%B %-d, %Y") %></strong>. </p>
+        <p id="index-description-approved-<%=res.id%> ">
+        <% if res.approved %>
+          <p class="green-approved booking-status"> <%= "Approved by #{res.tour.user.first_name}" %> (<%= link_to "Remove from dashboard?", reservation_path(res), method: :delete, class: "no-hover-decoration" %>)</p>
+          <% if res.review == nil %>
+            <p> <%= link_to "Rate this Tour", new_tour_reservation_review_path(res.tour, res)  %> </p>
+          <% end %>
+        <% elsif !res.approved && !res.declined %>
+          <p class="yellow-waiting booking-status"> <%= "Awating confirmation!" %> <strong>(<%= link_to "Cancel Reservation?", reservation_path(res), method: :delete, class: "no-hover-decoration" %>)</strong> </p>
+        <% else %>
+          <p class="red-declined booking-status"> <%= "Your booking has been declined by #{res.tour.user.first_name}" %> (<%= link_to "Remove from dashboard?", reservation_path(res), method: :delete, class: "no-hover-decoration" %>)</p>
+        <% end %>
+        </p>
+        <div> <strong> Tour Price: € <%= res.tour.price %> x <%= res.amount_of_people %> person</strong></div>
+        <p id="index-total-price">Total € <%= res.tour.price %></p>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>

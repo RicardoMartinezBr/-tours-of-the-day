@@ -1,0 +1,71 @@
+.card-product {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-product img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-product h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product a {
+  text-decoration: none;
+  color: #000;
+}
+
+
+.card-product a:hover {
+  text-decoration: none;
+  color: #d6514a;
+}
+
+.card-product p {
+  font-size: 1rem;
+  line-height: 1.4;
+  /*opacity: .8;*/
+  margin-bottom: 0;
+  margin-top: 8px;
+  color: #000;
+}
+
+.card-product .card-product-infos {
+  padding: 20px 12px;
+}
+
+.reservation-card-content-wrapper {
+  text-align: left;
+}
+
+#index-total-price {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+@media (min-width: 575px){
+  .card-product {
+    display: flex;
+    flex-direction: row;
+    height: 250px;
+  }
+
+  .card-product img {
+    height: 100%;
+    width: 40%;
+    object-fit: cover;
+  }
+
+  .card-product .card-product-infos {
+    padding: 16px;
+  }
+}
