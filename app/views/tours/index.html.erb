@@ -20,11 +20,11 @@
 
           </div>
           <h2 class="card-trip-pricing">€<%= tour.price %></h2>
-          <% if tour.user.avatar.attached? %>
-            <%= cl_image_tag tour.user.photo.key, class: 'card-trip-user avatar-bordered' %>
-          <% else %>
-            <%= image_tag "https://images.unsplash.com/photo-1593099295589-ee5c1aa4164f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2736&q=80", class: 'card-trip-user avatar-bordered'%>
-          <% end %>
+            <% if current_user.avatar.attached? %>
+              <%= cl_image_tag current_user.avatar.key, class: 'card-trip-user avatar-bordered' %>
+            <% else %>
+              <%= image_tag "https://images.unsplash.com/photo-1485178575877-1a13bf489dfe?ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwyNDgzNjQ1fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60", class: 'card-trip-user avatar-bordered' %>
+            <% end %>
         </div>
       </div>
     <% end %>

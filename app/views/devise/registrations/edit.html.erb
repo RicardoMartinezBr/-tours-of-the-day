@@ -1,4 +1,4 @@
-<div class="custom-container">
+<div class="custom-container my-sm-3 my-lg-5">
   <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -38,7 +38,7 @@
 
   </div>
   <div class="col-sm-12 col-lg-4">
-    <%= cl_image_tag current_user.avatar.key, class: "preview-avatar p-2 border my-3 ", width: 150  %>
+    <%= cl_image_tag current_user.avatar.key, class: "preview-avatar p-2 shadow my-3 ", width: 150  %>
   </div>
 
   <div class="form-actions">
