@@ -6,9 +6,6 @@
         <% if tour.photos.attached? %>
         <%= cl_image_tag tour.photos[0].key %>
         <% end %>
-
-        <!-- <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" /> -->
-        <%# end %>
         <div class="card-trip-infos">
           <div>
             <%= link_to tour_path(tour), class: "index-link pb-1" do %>

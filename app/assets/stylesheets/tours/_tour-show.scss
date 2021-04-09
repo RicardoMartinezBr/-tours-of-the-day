@@ -59,6 +59,16 @@
   border-bottom-right-radius: 10px;
 }
 
+.fa-edit, .fa-trash-alt, .fa-arrow-circle-left {
+  color: #000;
+  font-size: 1rem;
+}
+
+.fa-edit:hover, .fa-trash-alt:hover, .fa-arrow-circle-left:hover{
+  color: #d6514a;
+  font-size: 1.1rem;
+}
+
 @media (max-width: 800px){
   .side-carousel-image {
     display: none;

@@ -6,13 +6,10 @@
   height: 250px;
 }
 
-/*.decrease-image-size{
-  height:100%;
-  width:auto;
-  object-fit:cover;
-  flex:2;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-}*/
+.nav-link {
+  color: #000;
+}
 
-
+.nav-link:hover {
+  color: #d6514a;
+}

@@ -1,6 +1,15 @@
 .container-login {
-  width: 400px;
-  height: 400px;
+  width: 50vh;
+  height: 65vh;
   border: 1px solid #cecece;
   border-radius: 10px;
+}
+
+@media (min-width: 575px){
+  .container-login {
+    width: 60vh;
+    height: 65vh;
+    border: 1px solid #cecece;
+    border-radius: 10px;
+  }
 }
