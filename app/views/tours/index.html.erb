@@ -16,7 +16,7 @@
             <!-- <p class="mt-2"><%= tour.description&.truncate(50, separator: " ") %></p> -->
 
           </div>
-          <h2 class="card-trip-pricing">€<%= tour.price %></h2>
+          <h2 class="card-trip-pricing">€<%= tour.price %> p/p</h2>
             <% if tour.user.avatar.attached? %>
               <%= cl_image_tag tour.user.avatar.key, class: 'card-trip-user avatar-bordered' %>
             <% else %>
