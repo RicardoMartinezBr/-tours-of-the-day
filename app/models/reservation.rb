@@ -5,4 +5,5 @@ class Reservation < ApplicationRecord
 
   # Validations
   validates :date, presence: true
+  validates :amount_of_people, presence: true, length: { minimum: 1 }
 end

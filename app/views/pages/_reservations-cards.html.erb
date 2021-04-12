@@ -1,5 +1,5 @@
-<div class="card-product">
-  <% @reservations.each do |res| %>
+<% @reservations.each do |res| %>
+  <div class="card-product mb-3">
     <%= cl_image_tag res.tour.photos[0].key, class: "decrease-image-size" %>
     <div class="card-product-infos reservation-card-content-wrapper">
       <%= link_to tour_path(res.tour), class: "index-cards" do %>
@@ -21,5 +21,6 @@
         <div> <strong> Tour Price: € <%= res.tour.price %> x <%= res.amount_of_people %> person</strong></div>
         <p id="index-total-price">Total € <%= res.tour.price %></p>
     </div>
-  <% end %>
-</div>
+  </div>
+<% end %>
+

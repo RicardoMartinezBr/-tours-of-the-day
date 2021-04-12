@@ -1,13 +1,13 @@
-.navbar-lewagon {
+.navbar-tours {
   justify-content: space-between;
   background: white;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-tours .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-tours .navbar-brand img {
   width: 100px;
 }
 
@@ -37,21 +37,8 @@
   border:none!important;
 }
 
-@media (max-width: 300px){
+@media (max-width: 1200px){
   .navbar-custom-layout {
-    border-bottom: 1px solid #f1f1f199;
-  }
-}
-
-@media (max-width: 375px){
-  .navbar-custom-layout {
-    border-bottom: 1px solid #cecece;
-  }
-}
-
-@media (max-width: 575px){
-  .navbar-custom-layout {
-    /*border-bottom: 1px solid #cecece;*/
     box-shadow: 1px 1px 5px #f1f1f1E8;
   }
 }

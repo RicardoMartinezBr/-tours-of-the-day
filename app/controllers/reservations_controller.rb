@@ -18,7 +18,8 @@ class ReservationsController < ApplicationController
     if @reservation.date != nil
       # authorize(@reservation)
       if @reservation.save
-        redirect_to reservation_path(@reservation), notice: "Reservation was saved succsessfully!"
+        # redirect_to reservation_path(@reservation), notice: "Reservation was saved succsessfully!"
+        # redirect_to tour_path(@tour), notice: "Reservation was saved succsessfully!"
       else
         redirect_to tour_path(@tour), notice: "Could not create Reservation!"
       end
@@ -32,7 +33,7 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.find(params[:id])
     # authorize(@reservation)
     @reservation.destroy
-    redirect_to reservations_path, notice: "Reservation was cancelled succsesfully!"
+    redirect_to dashboard_path, notice: "Reservation was cancelled succsesfully!"
   end
 
   def update

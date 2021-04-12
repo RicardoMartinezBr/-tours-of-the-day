@@ -1,6 +1,5 @@
 <div class="">
-  <h1>Here go all tours</h1>
-  <div class="row cards-wrapper">
+  <div class="row cards-wrapper mt-4">
     <% @tours.each do |tour| %>
       <div class="col-sm-8 col-md-4 col-lg-3 card-trip">
         <% if tour.photos.attached? %>
@@ -27,4 +26,3 @@
     <% end %>
   </div>
 </div>
- </em>

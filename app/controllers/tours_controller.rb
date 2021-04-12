@@ -13,6 +13,7 @@ class ToursController < ApplicationController
 
   def show
     @tour = Tour.find(params[:id])
+    @reservations = Reservation.all
     @reservations = Reservation.new
     @favorite = Favorite.new
   end

@@ -7,12 +7,12 @@ class Tour < ApplicationRecord
 
   # Validations
   # validates :user, uniqueness: true
-  validates :photos, length: { minimum: 1 }
-  # validates :name, presence
+  validates :photos, length: { minimum: 5, maximum: 15 }
+  validates :name, presence: true
   # validates :city, presence
   # validates :country, presence
-  # validates :description, presence
-  # validates :price, presence
+  validates :description, presence: true
+  validates :price, presence: true
   CATEGORIES = ['City Tour', 'Boat Tour', 'Private Tours', 'Bike Tour', 'Museum Guide', 'Night Tour', 'Keukenhof', 'Walking Tour']
   # validates :category, presence: true, inclusion: { in: CATEGORIES }
 
