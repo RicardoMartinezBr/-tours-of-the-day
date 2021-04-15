@@ -1,17 +1,13 @@
 <div id="footer">
-  <footer class="px-3">
+  <footer class="">
     <div class="custom-container footer-responsive pb-md-4">
-      <div class="footer-links Footer-tours">
+      <div class="footer-links footer-design">
         <%= image_tag "logo2.png", alt: "This is the logo of tours of the day", class: "footer-logo" %>
-        <label for="cars">Choose a city</label>
-        <select name="cars" id="cars" form="carform">
-          <option value="amsterdam">Amsterdam</option>
-          <option value="utrecht">Utrecht</option>
-          <option value="rotterdam">Rotterdam</option>
-          <option value="the hague">The Hague</option>
-        </select>
+        <%= form_tag tours_path, method: :get do %>
+            <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Search for a City?" %>
+        <% end %>
       </div>
-      <div class="footer-links Footer-tours">
+      <div class="footer-links">
         <h6 class="subtitle">Tours</h6>
         <%= link_to "All Tours", tours_path %>
         <%= link_to "Features", root_path %>
