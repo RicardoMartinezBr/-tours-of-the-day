@@ -2,6 +2,7 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: :home
 
   def home
+    @tours = Tour.all
   end
 
   def dashboard
@@ -13,6 +14,6 @@ class PagesController < ApplicationController
     @reservation = Reservation.new
     @reservations = Reservation.all
     @tours = Tour.all
-    # @chatroom = Chatroom.find_or_create_by(portfolio: @portfolio, user: current_user)
+    # @chatroom = Chatroom.find_or_create_by(tour: @tour, user: current_user)
   end
 end

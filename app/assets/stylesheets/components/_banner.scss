@@ -23,3 +23,70 @@
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
+
+@media (max-width: 736px){
+  .banner {
+  height: 90vh;
+}
+
+  .banner h1 {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 667px){
+  .banner {
+  height: 100vh;
+}
+
+  .banner h1 {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 568px){
+  .banner {
+  background-size: cover;
+  background-position: center;
+  /*padding: 150px 0;*/
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  .banner h1 {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 414px){
+  .banner {
+  height: 60vh;
+}
+
+  .banner h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 375px){
+  .banner {
+    height: 60vh;
+  }
+
+  .banner h1 {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 320px){
+  .banner {
+    height: 60vh;
+
+  }
+
+  .banner h1 {
+    font-size: 38px;
+  }
+}

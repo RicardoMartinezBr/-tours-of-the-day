@@ -1,1 +1,136 @@
-// Specific CSS for your home-page
+// Specific CSS for your Home Page
+.search-text {
+  width: 75vh!important;
+  padding: 20px 20px;
+}
+
+.search-text:focus {
+  outline: none;
+}
+
+.search-button {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-left: -3px;
+}
+
+.search-text {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+@media (min-width: 375px) and (max-width: 768px){
+  .search-text {
+    width: 100%!important;
+    margin: 0px;
+    padding: 15px 12px;
+  }
+
+  .home-tours-subtitle {
+    font-size: 1.4rem;
+    /*width: 60vh;*/
+  }
+}
+
+/*@media (max-width: 768px){
+  .search-text {
+    width: 42vh!important;
+    margin: 0px;
+    padding: 20px 12px;
+  }
+
+  .home-tours-subtitle {
+    font-size: 1.4rem;
+    width: 60vh;
+  }
+}
+
+@media (max-width: 736px){
+  .search-text {
+    width: 80vh!important;
+    margin: 0px;
+    padding: 20px 12px;
+  }
+
+  .home-tours-subtitle {
+    font-size: 1.4rem;
+    width: 60vh;
+  }
+}
+
+@media (max-width: 694px){
+  .search-text {
+    width: 55vh!important;
+    margin: 0px;
+    padding: 20px 12px;
+  }
+
+  .home-tours-subtitle {
+    font-size: 1.4rem;
+    width: 60vh;
+  }
+}
+
+@media (max-width: 575px){
+  .search-text {
+    width: 60vh!important;
+    margin: 0px;
+    padding: 20px 12px;
+  }
+
+  .home-tours-subtitle {
+    font-size: 1.4rem;
+    width: 60vh;
+  }
+}
+
+@media (max-width: 568px){
+  .search-text {
+    width: 85vh!important;
+    margin: 0px;
+    padding: 20px 12px;
+  }
+
+  .home-tours-subtitle {
+    font-size: 1.4rem;
+    width: 60vh;
+  }
+}
+
+@media (max-width: 414px){
+  .search-text {
+    width: 40vh!important;
+    margin: 0px;
+    padding: 20px 12px;
+  }
+
+  .home-tours-subtitle {
+    font-size: 1.4rem;
+    width: 60vh;
+  }
+}*/
+
+@media (max-width: 375px){
+  .search-text {
+    width: 100%!important;
+    margin: 0px;
+    padding: 20px 12px;
+  }
+
+  .home-tours-subtitle {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 320px){
+  .search-text {
+    width: 100%!important;
+    margin: 0px -40px 0px 2px;
+    padding: 5px 12px;
+  }
+
+  .home-tours-subtitle {
+    font-size: 1.4rem;
+  }
+}
+
