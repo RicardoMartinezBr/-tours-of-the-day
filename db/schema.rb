@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_16_123351) do
+ActiveRecord::Schema.define(version: 2021_04_16_154431) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -88,6 +88,12 @@ ActiveRecord::Schema.define(version: 2021_04_16_123351) do
     t.bigint "user_id"
     t.string "duration"
     t.string "country"
+    t.float "longitude"
+    t.float "latitude"
+    t.text "languages"
+    t.text "highlights"
+    t.string "address"
+    t.text "includes"
     t.index ["user_id"], name: "index_tours_on_user_id"
   end
 
