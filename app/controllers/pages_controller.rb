@@ -18,7 +18,8 @@ class PagesController < ApplicationController
     @requests = Reservation.joins(:tour).where(tour: { user: current_user })
     # @user = current_user
     # @tour.user = @user
-    @favorites = current_user.favorites
+    @favorites = Favorite.all
+    # @favorites = current_user.favorites
     @reservation = Reservation.new
     @reservations = Reservation.all
     @tours = Tour.all
