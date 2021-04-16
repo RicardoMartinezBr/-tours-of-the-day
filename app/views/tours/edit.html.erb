@@ -4,12 +4,14 @@
 
     <div class="container">
       <%= simple_form_for @tour do |f| %>
-        <%= f.input :name, label: "Tour Name" %>
-        <%= f.input :city %>
-        <%= f.input :price, label: "Price per person" %>
-        <%= f.input :duration %>
-        <%= f.input :category %>
-        <%= f.input :description, label: "Tour description" %>
+        <div class="row">
+          <div class="col-sm-10 col-md-12 col-lg-6 "> <%= f.input :name, label: "Tour Name" %></div>
+          <div class="col-sm-10 col-md-12 col-lg-6 "> <%= f.input :city %></div>
+          <div class="col-sm-10 col-md-12 col-lg-4 "> <%= f.input :price, label: "Price per person" %></div>
+          <div class="col-sm-10 col-md-12 col-lg-4 "> <%= f.input :duration %></div>
+          <div class="col-sm-10 col-md-12 col-lg-4 "> <%= f.input :category %></div>
+          <div class="col-sm-10 col-md-12 col-lg-12 "> <%= f.input :description, label: "Tour description" %></div>
+        </div>
         <label class="btn btn-dark">
           <i class="fas fa-images"></i> Add photos to your tour
           <span style="display:none;">

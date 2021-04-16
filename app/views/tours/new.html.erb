@@ -4,12 +4,14 @@
 
     <div class="container">
       <%= simple_form_for @tour do |f| %>
-        <%= f.input :name, label: "Tour Name", placeholder: ' Tour name... E.g. City Tour?' %>
-        <%= f.input :city, placeholder: 'In what city is the tour? E.g. Amsterdam' %>
-        <%= f.input :price, placeholder: 'What is the price of the tour? E.g. Price 150 p/p' %>
-        <%= f.input :duration, placeholder: 'How long is the tour? E.g. 1 for one hour or 1,5 for one and half hour' %>
-        <%= f.input :category, placeholder: 'Tour category E.g. private tour or group tour...' %>
-        <%= f.input :description, as: :text, placeholder: 'Add here the description of you tour!' %>
+        <div class="row">
+          <div class="col-sm-10 col-md-12 col-lg-6 "><%= f.input :name, label: "Tour Name", placeholder: ' Tour name... E.g. City Tour?' %> </div>
+          <div class="col-sm-10 col-md-12 col-lg-6 "><%= f.input :city, placeholder: 'In what city is the tour? E.g. Amsterdam' %> </div>
+          <div class="col-sm-10 col-md-12 col-lg-4 "><%= f.input :price, label: "Price per person", placeholder: 'What is the price of the tour? E.g. Price 150 p/p' %> </div>
+          <div class="col-sm-10 col-md-12 col-lg-4 "><%= f.input :duration, label: "Tour Duration", placeholder: 'How long is the tour? E.g. 1 for one hour or 1,5 for one and half hour' %> </div>
+          <div class="col-sm-10 col-md-12 col-lg-4 "><%= f.input :category, placeholder: 'E.g. private tour or group tour...' %> </div>
+          <div class="col-sm-10 col-md-12 col-lg-12 "><%= f.input :description, as: :text, placeholder: 'Add here the description of you tour!' %> </div>
+        </div>
       <label class="btn btn-dark">
         <i class="fas fa-images"></i> Add photos to your tour
         <span style="display:none;">

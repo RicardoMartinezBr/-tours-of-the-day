@@ -3,6 +3,14 @@ class PagesController < ApplicationController
 
   def home
     @tours = Tour.all
+    if params[:query].present?
+      sql_query = "category ILIKE :query OR city ILIKE :query"
+
+      # @tours = Tour.where("category ILIKE ?", "%#{params[:query]}%")
+      @tours = Tour.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @tours = Tour.all
+    end
   end
 
   def dashboard

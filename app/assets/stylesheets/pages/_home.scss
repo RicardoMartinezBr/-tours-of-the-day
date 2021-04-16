@@ -19,6 +19,17 @@
   border-bottom-left-radius: 20px;
 }
 
+.city-links {
+  color: #fff;
+  text-decoration: none;
+}
+
+.city-links:hover {
+  color: #d6514a;
+  opacity: 0.8;
+  text-decoration: none;
+}
+
 @media (min-width: 375px) and (max-width: 768px){
   .search-text {
     width: 100%!important;
@@ -28,6 +39,7 @@
 
   .home-tours-subtitle {
     font-size: 1.4rem;
+    font-weight: 700;
     /*width: 60vh;*/
   }
 }
