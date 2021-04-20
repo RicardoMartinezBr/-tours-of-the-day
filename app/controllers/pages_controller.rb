@@ -1,12 +1,14 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: :home
+  skip_before_action :authenticate_user!, only: [:home]
 
   def home
     @tours = Tour.all
     if params[:query].present?
-      sql_query = "category ILIKE :query OR city ILIKE :query"
-
-      # @tours = Tour.where("category ILIKE ?", "%#{params[:query]}%")
+      sql_query = " \
+      tours.category @@ :query \
+      tours.city @@ :query \
+      tours.description @@ :query \
+      "
       @tours = Tour.where(sql_query, query: "%#{params[:query]}%")
     else
       @tours = Tour.all

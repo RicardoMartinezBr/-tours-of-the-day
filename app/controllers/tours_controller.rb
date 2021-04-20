@@ -2,6 +2,7 @@ class ToursController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
   before_action :set_tour, only: %i[show edit update destroy]
   def index
+    @tours = policy_scope(Tour).order(created_at: :desc)
     @tours = Tour.all
     if params[:query].present?
       sql_query = "category ILIKE :query OR city ILIKE :query"
@@ -15,6 +16,7 @@ class ToursController < ApplicationController
   end
 
   def show
+    authorize(@tour)
     @tour = Tour.find(params[:id])
     @reservations = Reservation.all
     @reservations = Reservation.new
@@ -23,6 +25,7 @@ class ToursController < ApplicationController
 
   def new
     @tour = Tour.new
+    authorize(@tour)
   end
 
   def create
@@ -30,6 +33,7 @@ class ToursController < ApplicationController
       @tour = Tour.create(tour_params)
       @user = current_user
       @tour.user = @user
+      authorize(@tour)
       if @tour.save
         redirect_to tour_path(@tour)
       else
@@ -42,9 +46,14 @@ class ToursController < ApplicationController
   end
 
   def edit
+    respond_to do |format|
+      format.js
+    end
+    authorize(@tour)
   end
 
   def update
+    authorize(@tour)
     @tour.update(tour_params)
     if @tour.save
       redirect_to tours_path
