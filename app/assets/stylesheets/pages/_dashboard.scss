@@ -13,3 +13,15 @@
 .nav-link:hover {
   color: #d6514a;
 }
+
+.dashboard-header {
+  font-size: 2.1rem;
+  font-weight: 600;
+}
+
+@media (min-width: 200px) and (max-width: 414px){
+  .dashboard-header {
+    font-size: 1.5rem;
+
+  }
+}

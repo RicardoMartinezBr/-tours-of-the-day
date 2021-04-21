@@ -1,4 +1,5 @@
 <% @reservations.each do |res| %>
+<% if res.user_id == current_user.id %>
   <div class="card-product mb-3">
     <%= cl_image_tag res.tour.photos[0].key, class: "decrease-image-size" %>
     <div class="card-product-infos reservation-card-content-wrapper">
@@ -22,5 +23,6 @@
         <p id="index-total-price">Total € <%= res.tour.price %></p>
     </div>
   </div>
+  <% end %>
 <% end %>
 

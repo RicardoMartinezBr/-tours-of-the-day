@@ -3,13 +3,13 @@ class ReviewsController < ApplicationController
     @review = Review.new
     @tour = Tour.find(params[:tour_id])
     @reservation = Reservation.find(params[:reservation_id])
-    # authorize(@review)
+    authorize(@review)
   end
 
   def create
     @review = Review.new(review_params)
     @review.reservation = Reservation.find(params[:reservation_id])
-    # authorize(@review)
+    authorize(@review)
     if @review.save
       redirect_to tours_path
     else

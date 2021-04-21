@@ -23,8 +23,16 @@
 }
 
 .preview-avatar {
-  width: 120px;
-  height: 110px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   object-fit: cover;
+}
+
+@media (min-width: 200px) and (max-width: 414px){
+  .preview-avatar {
+    width: 75px;
+    height: 75px;
+
+  }
 }

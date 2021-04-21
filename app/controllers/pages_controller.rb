@@ -17,14 +17,14 @@ class PagesController < ApplicationController
 
   def dashboard
     # @reservations = policy_scope(Reservation).where(user: current_user).order(created_at: :desc)
-    @requests = Reservation.joins(:tour).where(tour: { user: current_user })
+    @requests = Reservation.joins(:tour).where(tour: { user: current_user }).reverse_order
     # @user = current_user
     # @tour.user = @user
     @favorites = Favorite.all
     # @favorites = current_user.favorites
     @reservation = Reservation.new
-    @reservations = Reservation.all
-    @tours = Tour.all
+    @reservations = Reservation.all.reverse_order
+    @tours = Tour.all.reverse_order
     # @chatroom = Chatroom.find_or_create_by(tour: @tour, user: current_user)
   end
 end
