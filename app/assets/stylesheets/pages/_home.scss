@@ -30,6 +30,76 @@
   text-decoration: none;
 }
 
+// two image section 
+
+.two-image {
+  &__wrapper {
+    position:relative;
+    max-width: 100%;
+    height:100vh;
+    margin:100px 150px 250px 150px;
+  }
+
+  &__one {
+    max-width:750px;
+    width: 90%;
+    height:700px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: left;
+    }
+  }
+
+  &__text-box {
+    padding: 50px;
+    width: 450px;
+    height:450px;
+    position:absolute;
+    top:12%;
+    right:0;
+    color:#fff;
+    background-color: #d6514a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      text-align: center;
+    }
+
+    a {
+      display: inline-block;
+      background-color: #fff;
+      color:#000;
+      padding:10px 40px;
+
+    }
+
+    a:hover {
+      text-decoration: none;
+      color: rgba(0, 0, 0, .5);
+    }
+  }
+
+  &__two {
+    width:400px;
+    height:400px;
+    position:absolute;
+    top:70%;
+    right:11%;
+
+    img {
+      width:100%;
+      height:100%;
+      object-fit: cover;
+    }
+  }
+}
+
 @media (min-width: 375px) and (max-width: 768px){
   .search-text {
     width: 100%!important;
@@ -40,87 +110,119 @@
   .home-tours-subtitle {
     font-size: 1.4rem;
     font-weight: 700;
-    /*width: 60vh;*/
+  }
+
+  // Two image section
+
+  .two-image {
+    &__wrapper {
+      max-width: 100%;
+      height:1300px;
+      margin:50px 30px 50px 30px;
+    }
+
+    &__one {
+      width:100%;
+      height:90vh;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: left;
+      }
+    }
+
+    &__text-box {
+      padding: 50px;
+      width: 350px;
+      height:350px;
+      position:absolute;
+      top:35%;
+      right:-30px;
+      color:#fff;
+      background-color: #d6514a;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h2 {
+        text-align: center;
+      }
+
+      a {
+        display: inline-block;
+        background-color: #fff;
+        color:#000;
+        padding:10px 40px;
+
+      }
+
+      a:hover {
+        text-decoration: none;
+        color: rgba(0, 0, 0, .5);
+      }
+    }
+
+    &__two {
+      width:400px;
+      height:400px;
+      position:absolute;
+      top:60%;
+      right:16%;
+
+      img {
+        width:100%;
+        height:100%;
+        object-fit: cover;
+      }
+    }
   }
 }
 
-/*@media (max-width: 768px){
-  .search-text {
-    width: 42vh!important;
-    margin: 0px;
-    padding: 20px 12px;
-  }
+@media (min-width: 320px) and (max-width: 374px) {
+  // Two image section
 
-  .home-tours-subtitle {
-    font-size: 1.4rem;
-    width: 60vh;
+  .two-image {
+    &__wrapper {
+      position:relative;
+      max-width: 100%;
+      height:900px;
+      margin:50px 30px 50px 30px;
+    }
+
+    &__one {
+      width:100%;
+      height:90vh;
+    }
+
+    &__text-box {
+      padding: 30px;
+      width: 95%;
+      height:350px;
+      position:absolute;
+      top:35%;
+      right:-30px;
+      color:#fff;
+      background-color: #d6514a;
+    }
+
+    &__two {
+      width:300px;
+      height:300px;
+      position:absolute;
+      top:60%;
+      right:16%;
+
+      img {
+        width:100%;
+        height:100%;
+        object-fit: cover;
+      }
+    }
   }
 }
-
-@media (max-width: 736px){
-  .search-text {
-    width: 80vh!important;
-    margin: 0px;
-    padding: 20px 12px;
-  }
-
-  .home-tours-subtitle {
-    font-size: 1.4rem;
-    width: 60vh;
-  }
-}
-
-@media (max-width: 694px){
-  .search-text {
-    width: 55vh!important;
-    margin: 0px;
-    padding: 20px 12px;
-  }
-
-  .home-tours-subtitle {
-    font-size: 1.4rem;
-    width: 60vh;
-  }
-}
-
-@media (max-width: 575px){
-  .search-text {
-    width: 60vh!important;
-    margin: 0px;
-    padding: 20px 12px;
-  }
-
-  .home-tours-subtitle {
-    font-size: 1.4rem;
-    width: 60vh;
-  }
-}
-
-@media (max-width: 568px){
-  .search-text {
-    width: 85vh!important;
-    margin: 0px;
-    padding: 20px 12px;
-  }
-
-  .home-tours-subtitle {
-    font-size: 1.4rem;
-    width: 60vh;
-  }
-}
-
-@media (max-width: 414px){
-  .search-text {
-    width: 40vh!important;
-    margin: 0px;
-    padding: 20px 12px;
-  }
-
-  .home-tours-subtitle {
-    font-size: 1.4rem;
-    width: 60vh;
-  }
-}*/
 
 @media (max-width: 375px){
   .search-text {
