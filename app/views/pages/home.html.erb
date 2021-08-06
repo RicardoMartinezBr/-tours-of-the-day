@@ -20,68 +20,11 @@
 
 <h2 class="text-center my-5 home-tours-subtitle">Amazing Tours You <br/>Can't Miss!</h2>
 
-<div class="row cards-wrapper mt-4">
-  <% @tours.sample(3).each do |tour| %>
-    <div class="col-sm-6 col-md-4 col-lg-3 card-trip">
-      <% if tour.photos.attached? %>
-        <%= cl_image_tag tour.photos[0].key %>
-      <% end %>
-      <div class="card-trip-infos">
-        <div>
-          <%= link_to tour_path(tour), class: "index-link pb-1" do %>
-            <h2><%= tour.city %>: <%= tour.name %></h2>
-          <% end %>
-          <p class="mt-2 rating-index-style"> <i class="fas fa-star"></i> <%= tour.average_rating %> (<%= tour.reviews.count%> <%= tour.reviews.count > 1 ? "reviews" : "review" %>)</p>
-          <p class="mt-2 tour-duration-index"><i class="far fa-clock"></i> <%= tour.duration %> <%= tour.duration == 1 ? "hour" : "hours" %></p>
-          <!-- <p class="mt-2"><%= tour.description&.truncate(50, separator: " ") %></p> -->
+<%= render "component.product-card" %>
 
-        </div>
-        <h2 class="card-trip-pricing">€<%= tour.price %> p/p</h2>
-          <% if tour.user.avatar.attached? %>
-            <%= cl_image_tag tour.user.avatar.key, class: 'card-trip-user avatar-bordered' %>
-          <% else %>
-            <%= image_tag "https://images.unsplash.com/photo-1485178575877-1a13bf489dfe?ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwyNDgzNjQ1fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60", class: 'card-trip-user avatar-bordered' %>
-          <% end %>
-      </div>
-    </div>
-  <% end %>
-</div>
+<%= render "cta-images-section" %>
 
-<div class="container my-5">
-  <h2 class="text-center my-5 home-tours-subtitle">Perfect Places to Visit</h2>
-  <div class="cards">
-    <% @tours.sample(3).each do |tour| %>
-      <% case tour.city %>
-      <% when "Rio de Janeiro" %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dynirwhqr/image/upload/v1617961583/jh1pprthz32yaanw99z6wpdiqmwt.jpg) ">
-      <% when "Amsterdam" || "Netherlands" %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dynirwhqr/image/upload/v1617961539/aimti1gz265owscbrgehnev13y19.jpg) ">
-      <% when "Zaanse Schans" %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dynirwhqr/image/upload/v1618085814/bgpbrjv0x974ql2l7ydwgt9cebpr.jpg) ">
-      <% when "Iguaçu" %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dynirwhqr/image/upload/v1617961593/p4s1azzuzi6bniirx881ach355n3.jpg) ">
-      <% when "Sao Paulo" %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dynirwhqr/image/upload/v1617961576/9hkgvacvmu4wuny8f1j3fc1cyrr8.jpg) ">
-      <% when "Utrecht" %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dynirwhqr/image/upload/v1617961549/w3wn6e5csxcgrfcejwwgn2p2mdxk.jpg) ">
-      <% when "Lise" %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dynirwhqr/image/upload/v1617961441/kluk4oc2p187ygrw562a5xys5xi8.jpg) ">
-      <% when "The Hague" %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dynirwhqr/image/upload/v1617961507/ilvmre9crz6zrjwtl74df3vn5540.jpg) ">
-      <% when "Rotterdam" %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dynirwhqr/image/upload/v1617961459/wfmscr8zj5mrgv4i9otkwtklsov3.jpg) ">
-      <% when "San Blas" %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dynirwhqr/image/upload/v1618556915/nglgrol2pgn5c9lrxefydfddhn9c.jpg) ">
-      <% when "Belize" %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dynirwhqr/image/upload/v1618557194/qdnxg5ufogie6bu1hfekr9puyddx.jpg) ">
-      <% when "French Polynesia" %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dynirwhqr/image/upload/v1618557486/yk0socz5clpnw4negiu01zzhhe81.jpg) ">
-      <% else %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dynirwhqr/image/upload/v1618557963/jo-san-diego-IbDfOJEjq8Y-unsplash_txxbie.jpg) ">
-      <% end %>
-      <%= link_to "#{tour.city}", tours_path(:query => tour.city ), class: "city-links" %>
-      </div>
-    <% end %>
-  </div>
-</div>
+<%= render "component.city-cards" %>
+
+
 
